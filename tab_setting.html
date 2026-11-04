@@ -1,289 +1,528 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<head>
-<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
-<link rel="stylesheet" href="style.css" type="text/css">
-<title>���������^�u</title>
-</head>
-<body>
-<h4>���������^�u</h4>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>検索条件タブ</title>
+  </head>
+  <body>
+    <h4>検索条件タブ</h4>
 
-<hr size="2">
-<h4><a name="name">���O�Əꏊ</a></h4>
-<img alt="���O�Əꏊ" src="tab_name.png" usemap="#map_name">
-<map name="map_name">
-<area href="#date" shape="rect" alt="���t" coords="72,2,112,20">
-<area href="#others" shape="rect" alt="���̑�" coords="112,2,153,20">
-<area href="#name_name" shape="rect" alt="���O" coords="116,28,459,48">
-<area href="#name_text" shape="rect" alt="�܂܂�镶����" coords="116,54,332,73">
-<area href="#name_encoding" shape="rect" alt="�G���R�[�h" coords="338,54,459,74">
-<area href="#name_location" shape="rect" alt="�T���ꏊ" coords="116,80,459,100">
-<area href="#name_subfolders" shape="rect" alt="�T�u�t�H���_���T��" coords="116,111,233,124">
-<area href="#name_refer" shape="rect" alt="�Q��" coords="375,107,458,128">
-</map>
+    <hr size="2" />
+    <h4><a name="name">名前と場所</a></h4>
+    <img alt="名前と場所" src="tab_name.png" usemap="#map_name" />
+    <map name="map_name">
+      <area href="#date" shape="rect" alt="日付" coords="72,2,112,20" />
+      <area href="#others" shape="rect" alt="その他" coords="112,2,153,20" />
+      <area href="#name_name" shape="rect" alt="名前" coords="116,28,459,48" />
+      <area
+        href="#name_text"
+        shape="rect"
+        alt="含まれる文字列"
+        coords="116,54,332,73"
+      />
+      <area
+        href="#name_encoding"
+        shape="rect"
+        alt="エンコード"
+        coords="338,54,459,74"
+      />
+      <area
+        href="#name_location"
+        shape="rect"
+        alt="探す場所"
+        coords="116,80,459,100"
+      />
+      <area
+        href="#name_subfolders"
+        shape="rect"
+        alt="サブフォルダも探す"
+        coords="116,111,233,124"
+      />
+      <area
+        href="#name_refer"
+        shape="rect"
+        alt="参照"
+        coords="375,107,458,128"
+      />
+    </map>
 
-<hr size="2">
-<div class="indent">
+    <hr size="2" />
+    <div class="indent">
+      <h4><a name="name_name">名前</a></h4>
+      <div class="indent">
+        <p>検索するファイル／フォルダの名前を入力します。</p>
+        <p>
+          <b
+            >完全に一致した名前を検索する場合は、名前を<tt
+              ><font color="#FF0000">"</font></tt
+            >（ダブルクオーツ）で囲んで下さい。</b
+          >
+        </p>
+        <p>
+          又、空白が含まれる名前を検索する場合も同様に、名前を<tt>"</tt>（ダブルクオーツ）で囲むか、[オプション]の<a
+            href="menubar.html#option"
+            >[空白を含める]</a
+          >を有効にして下さい。
+        </p>
+        <div class="indent">
+          <h5>例</h5>
+          <p>
+            <tt
+              ><b
+                ><font color="#FF0000">"</font>Documents and Settings<font
+                  color="#FF0000"
+                  >"</font
+                ></b
+              ></tt
+            >
+          </p>
+          <p>上記は、Documents and Settingsと言う名前がヒットします。</p>
+        </div>
+        <p>
+          但し、<tt><b>"</b></tt>
+          で囲まれた文字列は完全に一致した名前しかヒットしないので、
+        </p>
+        <p>
+          例えば<b>The Documents and Settings and Others</b
+          >と言う名前もヒットさせるには、ワイルドカードを追加して
+        </p>
+        <p>
+          <tt
+            ><b
+              ><font color="#FF0000">"*</font>Documents and Settings<font
+                color="#FF0000"
+                >*"</font
+              ></b
+            ></tt
+          >
+        </p>
+        <p>
+          と指定するか、[オプション]の<a href="menubar.html#option"
+            >[空白を含める]</a
+          >を有効にし、
+        </p>
+        <p>
+          <tt><b>Documents and Settings</b></tt>
+        </p>
+        <p>と指定して下さい。</p>
+        <p>
+          <a href="menubar.html">メニューバー</a>の<a href="menubar.html#option"
+            >オプション</a
+          >メニューで大文字と小文字を区別、正規表現を使用の設定が出来ます。
+        </p>
+        <p>以下のワイルドカードが使用出来ます（正規表現を使用しない場合）。</p>
+        <div class="indent">
+          <p></p>
+          <h5><tt>*</tt></h5>
+          <div class="indent">
+            <p>任意の0文字以上の文字</p>
+          </div>
+          <h5><tt>?</tt></h5>
+          <div class="indent">
+            <p>任意の1文字</p>
+          </div>
+        </div>
+        <p>
+          AND検索、OR検索が出来ます。ANDとORを組み合わせる場合、ANDが優先されます。（全てのAND条件に含まれる物がヒットします。）
+        </p>
+        <div class="indent">
+          <h5>AND検索</h5>
+          <div class="indent">
+            <p>
+              <tt
+                >名前1<font color="#FF0000"><b> AND </b></font>名前2</tt
+              ><br />
+              <tt
+                >名前1<font color="#FF0000"><b>;AND </b></font>名前2</tt
+              ><br />
+              <tt
+                >名前1<font color="#FF0000"><b>&amp;</b></font
+                >名前2</tt
+              ><br />
+              <tt
+                >名前1<font color="#FF0000"><b>+</b></font
+                >名前2</tt
+              >
+            </p>
+            <h5>
+              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              >を有効にした場合
+            </h5>
+            <div class="indent">
+              <p>
+                <tt
+                  >名前1<font color="#FF0000"><b>:</b></font
+                  >名前2</tt
+                >
+              </p>
+            </div>
+            <p>上記は、名前1と名前2を含むファイルがヒットします。</p>
+          </div>
+          <h5>OR検索</h5>
+          <div class="indent">
+            <p>
+              <tt
+                >名前1<font color="#FF0000"><b> OR </b></font>名前2</tt
+              ><br />
+              <tt
+                >名前1<font color="#FF0000"><b>;OR </b></font>名前2</tt
+              ><br />
+              <tt
+                >名前1<font color="#FF0000"><b>;</b></font
+                >名前2</tt
+              ><br />
+              <tt>名前1<b> </b>名前2</tt>
+            </p>
+            <h5>
+              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              >を有効にした場合
+            </h5>
+            <div class="indent">
+              <p>
+                <tt
+                  >名前1<font color="#FF0000"><b>/</b></font
+                  >名前2</tt
+                >
+              </p>
+            </div>
+            <p>上記は、名前1か名前2を含むファイルがヒットします。</p>
+          </div>
+          <h5>OR検索(完全一致)</h5>
+          <div class="indent">
+            <p>
+              <tt
+                ><b>"</b>名前1<b>"</b><font color="#FF0000"><b> OR </b></font
+                ><b>"</b>名前2<b>"</b></tt
+              ><br />
+              <tt
+                ><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;OR </b></font
+                ><b>"</b>名前2<b>"</b></tt
+              ><br />
+              <tt
+                ><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;</b></font
+                ><b>"</b>名前2<b>"</b></tt
+              ><br />
+              <tt><b>"</b>名前1<b>"</b><b> </b><b>"</b>名前2<b>"</b></tt>
+            </p>
+            <h5>
+              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              >を有効にした場合
+            </h5>
+            <div class="indent">
+              <p>
+                <tt
+                  ><b>"</b>名前1<b>"</b><font color="#FF0000"><b>/</b></font
+                  ><b>"</b>名前2<b>"</b></tt
+                >
+              </p>
+            </div>
+            <p>
+              上記は、名前1と完全に一致するか名前2と完全に一致するファイルがヒットします。
+            </p>
+          </div>
+          <h5>OR検索(完全一致＋部分一致)</h5>
+          <div class="indent">
+            <p>
+              <tt
+                ><b>"</b>名前1<b>"</b
+                ><font color="#FF0000"><b> OR </b></font>名前2</tt
+              ><br />
+              <tt
+                ><b>"</b>名前1<b>"</b
+                ><font color="#FF0000"><b>;OR </b></font>名前2</tt
+              ><br />
+              <tt
+                ><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;</b></font
+                >名前2</tt
+              ><br />
+              <tt><b>"</b>名前1<b>"</b><b> </b>名前2</tt>
+            </p>
+            <h5>
+              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              >を有効にした場合
+            </h5>
+            <div class="indent">
+              <p>
+                <tt
+                  ><b>"</b>名前1<b>"</b><font color="#FF0000"><b>/</b></font
+                  >名前2</tt
+                >
+              </p>
+            </div>
+            <p>
+              上記は、名前1と完全に一致するか名前2と一致するファイルがヒットします。
+            </p>
+          </div>
+          <p>AND／ORの文字は半角で、大文字でも小文字でも構いません。</p>
+        </div>
+        <p>
+          右側のドロップダウンボタン（▼）をクリックすると、履歴が表示されます。
+        </p>
+        <div class="indent">
+          <p>
+            履歴はpffs.exeのある場所の<tt><b>pffs.log</b></tt
+            >と言うファイルに保存されます。
+          </p>
+          <p>
+            このファイルを削除するか、テキストエディタ等で開いて文字列を全て削除すると履歴を消去する事が出来ます。
+          </p>
+        </div>
+      </div>
 
-<h4><a name="name_name">���O</a></h4>
-<div class="indent">
-<p>��������t�@�C���^�t�H���_�̖��O����͂��܂��B</p>
-<p><b>���S�Ɉ�v�������O����������ꍇ�́A���O��<tt><font color="#FF0000">"</font></tt>�i�_�u���N�I�[�c�j�ň͂�ŉ������B</b></p>
-<p>���A�󔒂��܂܂�閼�O����������ꍇ�����l�ɁA���O��<tt>"</tt>�i�_�u���N�I�[�c�j�ň͂ނ��A[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ��ĉ������B</p>
-<div class="indent">
-<h5>��</h5>
-<p><tt><b><font color="#FF0000">"</font>Documents and Settings<font color="#FF0000">"</font></b></tt></p>
-<p>��L�́ADocuments and Settings�ƌ������O���q�b�g���܂��B</p>
-</div>
-<p>�A���A<tt><b>"</b></tt> �ň͂܂ꂽ������͊��S�Ɉ�v�������O�����q�b�g���Ȃ��̂ŁA</p>
-<p>�Ⴆ��<b>The Documents and Settings and Others</b>�ƌ������O���q�b�g������ɂ́A���C���h�J�[�h��ǉ�����</p>
-<p><tt><b><font color="#FF0000">"*</font>Documents and Settings<font color="#FF0000">*"</font></b></tt></p>
-<p>�Ǝw�肷�邩�A[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ��A</p>
-<p><tt><b>Documents and Settings</b></tt></p>
-<p>�Ǝw�肵�ĉ������B</p>
-<p><a href="menubar.html">���j���[�o�[</a>��<a href="menubar.html#option">�I�v�V����</a>���j���[�ő啶���Ə���������ʁA���K�\�����g�p�̐ݒ肪�o���܂��B</p>
-<p>�ȉ��̃��C���h�J�[�h���g�p�o���܂��i���K�\�����g�p���Ȃ��ꍇ�j�B</p>
-<div class="indent">
-<p><h5><tt>*</tt></h5>
-<div class="indent">
-<p>�C�ӂ�0�����ȏ�̕���</p>
-</div>
-<h5><tt>?</tt></h5>
-<div class="indent">
-<p>�C�ӂ�1����</p>
-</div>
-</div>
-<p>AND�����AOR�������o���܂��BAND��OR��g�ݍ��킹��ꍇ�AAND���D�悳��܂��B�i�S�Ă�AND�����Ɋ܂܂�镨���q�b�g���܂��B�j</p>
-<div class="indent">
-<h5>AND����</h5>
-<div class="indent">
-<p><tt>���O1<font color="#FF0000"><b> AND </b></font>���O2</tt><br>
-<tt>���O1<font color="#FF0000"><b>;AND </b></font>���O2</tt><br>
-<tt>���O1<font color="#FF0000"><b>&amp;</b></font>���O2</tt><br>
-<tt>���O1<font color="#FF0000"><b>+</b></font>���O2</tt></p>
-<h5>[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ����ꍇ</h5>
-<div class="indent">
-<p><tt>���O1<font color="#FF0000"><b>:</b></font>���O2</tt></p>
-</div>
-<p>��L�́A���O1�Ɩ��O2���܂ރt�@�C�����q�b�g���܂��B</p>
-</div>
-<h5>OR����</h5>
-<div class="indent">
-<p><tt>���O1<font color="#FF0000"><b> OR </b></font>���O2</tt><br>
-<tt>���O1<font color="#FF0000"><b>;OR </b></font>���O2</tt><br>
-<tt>���O1<font color="#FF0000"><b>;</b></font>���O2</tt><br>
-<tt>���O1<b> </b>���O2</tt></p>
-<h5>[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ����ꍇ</h5>
-<div class="indent">
-<p><tt>���O1<font color="#FF0000"><b>/</b></font>���O2</tt></p>
-</div>
-<p>��L�́A���O1�����O2���܂ރt�@�C�����q�b�g���܂��B</p>
-</div>
-<h5>OR����(���S��v)</h5>
-<div class="indent">
-<p><tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b> OR </b></font><b>"</b>���O2<b>"</b></tt><br>
-<tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>;OR </b></font><b>"</b>���O2<b>"</b></tt><br>
-<tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>;</b></font><b>"</b>���O2<b>"</b></tt><br>
-<tt><b>"</b>���O1<b>"</b><b> </b><b>"</b>���O2<b>"</b></tt></p>
-<h5>[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ����ꍇ</h5>
-<div class="indent">
-<p><tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>/</b></font><b>"</b>���O2<b>"</b></tt></p>
-</div>
-<p>��L�́A���O1�Ɗ��S�Ɉ�v���邩���O2�Ɗ��S�Ɉ�v����t�@�C�����q�b�g���܂��B</p>
-</div>
-<h5>OR����(���S��v�{������v)</h5>
-<div class="indent">
-<p><tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b> OR </b></font>���O2</tt><br>
-<tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>;OR </b></font>���O2</tt><br>
-<tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>;</b></font>���O2</tt><br>
-<tt><b>"</b>���O1<b>"</b><b> </b>���O2</tt></p>
-<h5>[�I�v�V����]��<a href="menubar.html#option">[�󔒂��܂߂�]</a>��L���ɂ����ꍇ</h5>
-<div class="indent">
-<p><tt><b>"</b>���O1<b>"</b><font color="#FF0000"><b>/</b></font>���O2</tt></p>
-</div>
-<p>��L�́A���O1�Ɗ��S�Ɉ�v���邩���O2�ƈ�v����t�@�C�����q�b�g���܂��B</p>
-</div>
-<p>AND�^OR�̕����͔��p�ŁA�啶���ł��������ł��\���܂���B</p>
-</div>
-<p>�E���̃h���b�v�_�E���{�^���i���j���N���b�N����ƁA�������\������܂��B</p>
-<div class="indent">
-<p>������pffs.exe�̂���ꏊ��<tt><b>pffs.log</b></tt>�ƌ����t�@�C���ɕۑ�����܂��B</p>
-<p>���̃t�@�C�����폜���邩�A�e�L�X�g�G�f�B�^���ŊJ���ĕ������S�č폜����Ɨ������������鎖���o���܂��B</p>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="name_text">含まれる文字列</a></h4>
+      <div class="indent">
+        <p>ファイルにバイナリレベルで含まれる文字列を指定します。</p>
+        <p>
+          文字のエンコードによってバイナリデータ値が変わる為、同じ文字でもエンコードが異なる場合、ヒットしません。
+        </p>
+        <p>
+          又、<a href="menubar.html#option">大文字と小文字の区別</a>、<a
+            href="menubar.html#option"
+            >正規表現の使用</a
+          >はこの項目には関係ありません。
+        </p>
+        <div class="indent">
+          <h4><a name="name_encoding">エンコード</a></h4>
+          <img alt="エンコード" src="encoding.png" />
+          <div class="indent">
+            <p>
+              含まれる文字列のエンコードを指定します。<b
+                ><a href="#name">名前</a></b
+              >には関係ありません。
+            </p>
+            <div class="indent">
+              <h5>ANSI</h5>
+              <h5>ASCII</h5>
+              <h5>Big Endian</h5>
+              <h5>Unicode</h5>
+              <h5>UTF32</h5>
+              <h5>UTF7</h5>
+              <h5>UTF8</h5>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<hr size="2">
-<h4><a name="name_text">�܂܂�镶����</a></h4>
-<div class="indent">
-<p>�t�@�C���Ƀo�C�i�����x���Ŋ܂܂�镶������w�肵�܂��B</p>
-<p>�����̃G���R�[�h�ɂ���ăo�C�i���f�[�^�l���ς��ׁA���������ł��G���R�[�h���قȂ�ꍇ�A�q�b�g���܂���B</p>
-<p>���A<a href="menubar.html#option">�啶���Ə������̋��</a>�A<a href="menubar.html#option">���K�\���̎g�p</a>�͂��̍��ڂɂ͊֌W����܂���B</p>
-<div class="indent">
+      <hr size="2" />
+      <h4><a name="name_location">探す場所</a></h4>
+      <div class="indent">
+        <p>検索するパスを指定します。</p>
+        <p>
+          任意に入力する他、右端のドロップダウンボタン（▼）で登録された一覧の中から選択する事が出来ます。
+        </p>
+        <div class="indent">
+          <p>一番上にはマイ コンピュータが登録されています。</p>
+          <div class="indent">
+            <p>
+              マイ
+              コンピュータを選択すると全てのドライブを検索対象とします。この場合、ドライブ単位で<a
+                href="menubar.html#option"
+                >並列処理</a
+              >を行う事が出来ます。
+            </p>
+          </div>
+          <p>
+            その次にマイ ドキュメント、マイ ピクチャ、マイ ビデオ、マイ
+            ミュージックのフォルダ、各ドライブの順に登録されますが、Windowsのバージョン／環境により異なる場合があります。
+          </p>
+        </div>
+        <p><a href="#name">参照ボタン</a>で場所を指定する事も出来ます。</p>
+      </div>
 
-<h4><a name="name_encoding">�G���R�[�h</a></h4>
-<img alt="�G���R�[�h" src="encoding.png">
-<div class="indent">
-<p>�܂܂�镶����̃G���R�[�h���w�肵�܂��B<b><a href="#name">���O</a></b>�ɂ͊֌W����܂���B</p>
-<div class="indent">
-<h5>ANSI</h5>
-<h5>ASCII</h5>
-<h5>Big Endian</h5>
-<h5>Unicode</h5>
-<h5>UTF32</h5>
-<h5>UTF7</h5>
-<h5>UTF8</h5>
-</div>
-</div>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="name_subfolders">サブフォルダも探す</a></h4>
+      <div class="indent">
+        <p>
+          <a href="#name">探す場所</a>で指定したパスのサブフォルダも検索します。
+        </p>
+        <p>
+          リパース ポイント(ジャンクション)をスキップしたい場合、<a
+            href="howto.html#bootoptions"
+            >起動オプション</a
+          >に <b>/skipreparsepoint</b> を追加して起動して下さい。
+        </p>
+        <h5>※注:Ver.2.9-2.11</h5>
+        <div class="indent">
+          <p>リパース ポイント(ジャンクション)はスキップします。</p>
+        </div>
+      </div>
 
-<hr size="2">
-<h4><a name="name_location">�T���ꏊ</a></h4>
-<div class="indent">
-<p>��������p�X���w�肵�܂��B</p>
-<p>�C�ӂɓ��͂��鑼�A�E�[�̃h���b�v�_�E���{�^���i���j�œo�^���ꂽ�ꗗ�̒�����I�����鎖���o���܂��B</p>
-<div class="indent">
-<p>��ԏ�ɂ̓}�C �R���s���[�^���o�^����Ă��܂��B</p>
-<div class="indent">
-<p>�}�C �R���s���[�^��I������ƑS�Ẵh���C�u�������ΏۂƂ��܂��B���̏ꍇ�A�h���C�u�P�ʂ�<a href="menubar.html#option">���񏈗�</a>���s�������o���܂��B</p>
-</div>
-<p>���̎��Ƀ}�C �h�L�������g�A�}�C �s�N�`���A�}�C �r�f�I�A�}�C �~���[�W�b�N�̃t�H���_�A�e�h���C�u�̏��ɓo�^����܂����AWindows�̃o�[�W�����^���ɂ��قȂ�ꍇ������܂��B</p>
-</div>
-<p><a href="#name">�Q�ƃ{�^��</a>�ŏꏊ���w�肷�鎖���o���܂��B</p>
-</div>
+      <hr size="2" />
+      <h4><a name="name_refer">参照ボタン</a></h4>
+      <div class="indent">
+        <p>
+          <a href="#name">探す場所</a
+          >に現在のWindowsの環境に存在するパスをダイアログで指定する事が出来ます。
+        </p>
+      </div>
+    </div>
 
-<hr size="2">
-<h4><a name="name_subfolders">�T�u�t�H���_���T��</a></h4>
-<div class="indent">
-<p><a href="#name">�T���ꏊ</a>�Ŏw�肵���p�X�̃T�u�t�H���_���������܂��B</p>
-<p>���p�[�X �|�C���g(�W�����N�V����)���X�L�b�v�������ꍇ�A<a href="howto.html#bootoptions">�N���I�v�V����</a>�� <b>/skipreparsepoint</b> ��ǉ����ċN�����ĉ������B</p>
-<h5>����:Ver.2.9-2.11</h5>
-<div class="indent">
-<p>���p�[�X �|�C���g(�W�����N�V����)�̓X�L�b�v���܂��B</p>
-</div>
-</div>
+    <hr size="2" />
+    <h4><a name="date">日付</a></h4>
+    <img alt="日付" src="tab_date.png" usemap="#map_date" />
+    <map name="map_date">
+      <area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20" />
+      <area href="#others" shape="rect" alt="その他" coords="114,2,153,20" />
+      <area
+        href="#date_limit"
+        shape="rect"
+        alt="一定期間内の次のファイルすべて"
+        coords="10,31,198,44"
+      />
+      <area
+        href="#date_type"
+        shape="rect"
+        alt="日付の種類"
+        coords="211,28,332,48"
+      />
+      <area
+        href="#date_section"
+        shape="rect"
+        alt="日付指定"
+        coords="91,54,459,73"
+      />
+      <area href="#date_months" shape="rect" alt="月間" coords="91,79,285,98" />
+      <area href="#date_days" shape="rect" alt="月間" coords="91,104,275,123" />
+    </map>
 
-<hr size="2">
-<h4><a name="name_refer">�Q�ƃ{�^��</a></h4>
-<div class="indent">
-<p><a href="#name">�T���ꏊ</a>�Ɍ��݂�Windows�̊��ɑ��݂���p�X���_�C�A���O�Ŏw�肷�鎖���o���܂��B</p>
-</div>
-</div>
+    <hr size="2" />
+    <div class="indent">
+      <h4><a name="date_limit">一定期間内の次のファイルすべて</a></h4>
+      <div class="indent">
+        <p>チェックすると、検索条件に日付を加える事が出来ます。</p>
+        <div class="indent">
+          <h4><a name="date_type">日付の種類</a></h4>
+          <img alt="日付の種類" src="datetype.png" />
+          <div class="indent">
+            <h5>変更されたファイル</h5>
+            <div class="indent">
+              <p>変更された日付が該当するファイル／フォルダがヒットします。</p>
+            </div>
+            <h5>作成されたファイル</h5>
+            <div class="indent">
+              <p>作成された日付が該当するファイル／フォルダがヒットします。</p>
+            </div>
+            <h5>アクセスされたファイル</h5>
+            <div class="indent">
+              <p>
+                アクセスされた日付が該当するファイル／フォルダがヒットします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<hr size="2">
-<h4><a name="date">���t</a></h4>
-<img alt="���t" src="tab_date.png" usemap="#map_date">
-<map name="map_date">
-<area href="#name" shape="rect" alt="���O�Əꏊ" coords="2,2,68,20">
-<area href="#others" shape="rect" alt="���̑�" coords="114,2,153,20">
-<area href="#date_limit" shape="rect" alt="�����ԓ��̎��̃t�@�C�����ׂ�" coords="10,31,198,44">
-<area href="#date_type" shape="rect" alt="���t�̎��" coords="211,28,332,48">
-<area href="#date_section" shape="rect" alt="���t�w��" coords="91,54,459,73">
-<area href="#date_months" shape="rect" alt="����" coords="91,79,285,98">
-<area href="#date_days" shape="rect" alt="����" coords="91,104,275,123">
-</map>
+      <hr size="2" />
+      <h4><a name="date_section">日付指定</a></h4>
+      <div class="indent">
+        <p>日付単位で特定の区間を指定します。</p>
+        <p>
+          左側に最も古い日付、右側に最も新しい日付を指定する事で、指定した<a
+            href="#date_type"
+            >日付の種類</a
+          >がその区間に含まれるファイル／フォルダがヒットします。
+        </p>
+        <p>左側の日付には既定で3ヶ月前の日付が設定されます。</p>
+        <p>
+          左側の日付を変更しなければ、右側の日付より古い日付が全て該当します。
+        </p>
+        <p>
+          右側には起動時の日付（<a href="buttons.html">新しい条件</a
+          >を実行した場合、その時の日付）が指定されます。
+        </p>
+        <p>
+          右側の日付を変更しなければ、左側の日付から現在までの日付が全て該当します。
+        </p>
+        <p>
+          日付は直接入力する事が出来ますが、右側の▼をクリックするとカレンダー形式のGUIで選択出来ます。
+        </p>
+      </div>
 
-<hr size="2">
-<div class="indent">
+      <hr size="2" />
+      <h4><a name="date_months">過去月間</a></h4>
+      <div class="indent">
+        <p>過去から現在までの月数を指定します。</p>
+      </div>
 
-<h4><a name="date_limit">�����ԓ��̎��̃t�@�C�����ׂ�</a></h4>
-<div class="indent">
-<p>�`�F�b�N����ƁA���������ɓ��t�������鎖���o���܂��B</p>
-<div class="indent">
+      <hr size="2" />
+      <h4><a name="date_days">過去日間</a></h4>
+      <div class="indent">
+        <p>過去から現在までの日数を指定します。</p>
+      </div>
+    </div>
 
-<h4><a name="date_type">���t�̎��</a></h4>
-<img alt="���t�̎��" src="datetype.png">
-<div class="indent">
-<h5>�ύX���ꂽ�t�@�C��</h5>
-<div class="indent">
-<p>�ύX���ꂽ���t���Y������t�@�C���^�t�H���_���q�b�g���܂��B</p>
-</div>
-<h5>�쐬���ꂽ�t�@�C��</h5>
-<div class="indent">
-<p>�쐬���ꂽ���t���Y������t�@�C���^�t�H���_���q�b�g���܂��B</p>
-</div>
-<h5>�A�N�Z�X���ꂽ�t�@�C��</h5>
-<div class="indent">
-<p>�A�N�Z�X���ꂽ���t���Y������t�@�C���^�t�H���_���q�b�g���܂��B</p>
-</div>
-</div>
-</div>
-</div>
+    <hr size="2" />
+    <h4><a name="others">その他</a></h4>
+    <img alt="日付" src="tab_others.png" usemap="#map_others" />
+    <map name="map_others">
+      <area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20" />
+      <area href="#date" shape="rect" alt="日付" coords="70,2,110,20" />
+      <area
+        href="#others_type"
+        shape="rect"
+        alt="ファイルの種類"
+        coords="106,28,459,48" />
+      <area
+        href="#others_size"
+        shape="rect"
+        alt="サイズの範囲"
+        coords="106,54,232,74" />
+      <area
+        href="#others_size"
+        shape="rect"
+        alt="サイズの範囲"
+        coords="106,80,232,100"
+    /></map>
 
-<hr size="2">
-<h4><a name="date_section">���t�w��</a></h4>
-<div class="indent">
-<p>���t�P�ʂœ���̋�Ԃ��w�肵�܂��B</p>
-<p>�����ɍł��Â����t�A�E���ɍł��V�������t���w�肷�鎖�ŁA�w�肵��<a href="#date_type">���t�̎��</a>�����̋�ԂɊ܂܂��t�@�C���^�t�H���_���q�b�g���܂��B</p>
-<p>�����̓��t�ɂ͊����3�����O�̓��t���ݒ肳��܂��B</p>
-<p>�����̓��t��ύX���Ȃ���΁A�E���̓��t���Â����t���S�ĊY�����܂��B</p>
-<p>�E���ɂ͋N�����̓��t�i<a href="buttons.html">�V��������</a>�����s�����ꍇ�A���̎��̓��t�j���w�肳��܂��B</p>
-<p>�E���̓��t��ύX���Ȃ���΁A�����̓��t���猻�݂܂ł̓��t���S�ĊY�����܂��B</p>
-<p>���t�͒��ړ��͂��鎖���o���܂����A�E���́����N���b�N����ƃJ�����_�[�`����GUI�őI���o���܂��B</p>
-</div>
+    <hr size="2" />
+    <div class="indent">
+      <h4><a name="others_type">ファイルの種類</a></h4>
+      <div class="indent">
+        <p>検索するファイルの種類（拡張子）を指定します。</p>
+        <p>
+          PF File searchでは単純に拡張子で区別しているので、例えば
+          <tt><b>.jpg</b></tt> と <tt><b>.jpeg</b></tt> は区別されます。
+        </p>
+        <p><b>ファイル</b>を指定するとファイルのみがヒットします。</p>
+        <p><b>フォルダ</b>を指定するとフォルダのみがヒットします。</p>
+        <p>その他は、レジストリ情報を元に拡張子と種類名が表示されます。</p>
+        <p>
+          特定の拡張子のみを指定したい場合はここで指定して下さい（<a
+            href="#name"
+            >名前</a
+          >に <tt>*.txt</tt> 等と指定するよりも検索効率が良くなります。）。
+        </p>
+      </div>
 
-<hr size="2">
-<h4><a name="date_months">�ߋ�����</a></h4>
-<div class="indent">
-<p>�ߋ����猻�݂܂ł̌������w�肵�܂��B</p>
-</div>
-
-<hr size="2">
-<h4><a name="date_days">�ߋ�����</a></h4>
-<div class="indent">
-<p>�ߋ����猻�݂܂ł̓������w�肵�܂��B</p>
-</div>
-</div>
-
-<hr size="2">
-<h4><a name="others">���̑�</a></h4>
-<img alt="���t" src="tab_others.png" usemap="#map_others">
-<map name="map_others">
-<area href="#name" shape="rect" alt="���O�Əꏊ" coords="2,2,68,20">
-<area href="#date" shape="rect" alt="���t" coords="70,2,110,20">
-<area href="#others_type" shape="rect" alt="�t�@�C���̎��" coords="106,28,459,48">
-<area href="#others_size" shape="rect" alt="�T�C�Y�͈̔�" coords="106,54,232,74">
-<area href="#others_size" shape="rect" alt="�T�C�Y�͈̔�" coords="106,80,232,100"></map>
-
-<hr size="2">
-<div class="indent">
-
-<h4><a name="others_type">�t�@�C���̎��</a></h4>
-<div class="indent">
-<p>��������t�@�C���̎�ށi�g���q�j���w�肵�܂��B</p>
-<p>PF File search�ł͒P���Ɋg���q�ŋ�ʂ��Ă���̂ŁA�Ⴆ�� <tt><b>.jpg</b></tt> �� <tt><b>.jpeg</b></tt> �͋�ʂ���܂��B</p>
-<p><b>�t�@�C��</b>���w�肷��ƃt�@�C���݂̂��q�b�g���܂��B</p>
-<p><b>�t�H���_</b>���w�肷��ƃt�H���_�݂̂��q�b�g���܂��B</p>
-<p>���̑��́A���W�X�g���������Ɋg���q�Ǝ�ޖ����\������܂��B</p>
-<p>����̊g���q�݂̂��w�肵�����ꍇ�͂����Ŏw�肵�ĉ������i<a href="#name">���O</a>�� <tt>*.txt</tt> ���Ǝw�肷����������������ǂ��Ȃ�܂��B�j�B</p>
-</div>
-
-<hr size="2">
-<h4><a name="others_size">�T�C�Y�͈̔�</a></h4>
-<div class="indent">
-<p>��������t�@�C���̃T�C�Y���w�肵�܂��B</p>
-<p>�T�C�Y�̓L���o�C�g�iKB�j�P�ʂŎw�肵�܂��B</p>
-<p>�����̃v���_�E���Ŕ͈͂�I�����A�E���ɃT�C�Y�𐔒l�œ��͂��܂��B</p>
-<p>�T�C�Y���w�肵���ꍇ�A�t�H���_�̓q�b�g���܂���B</p>
-<div class="indent">
-<img alt="�T�C�Y�͈̔�" src="size.png">
-<div class="indent">
-<h5>���ׂ�</h5>
-<div class="indent">
-<p>�T�C�Y�����肵�܂���B</p>
-</div>
-<h5>�Œ�</h5>
-<div class="indent">
-<p>�Œ�T�C�Y���w�肵�܂��B</p>
-<p>�w�肵���T�C�Y�ȏ�̃t�@�C�����q�b�g���܂��B</p>
-</div>
-<h5>�ō�</h5>
-<div class="indent">
-<p>�ō��T�C�Y���w�肵�܂��B</p>
-<p>�w�肵���T�C�Y�ȉ��̃t�@�C�����q�b�g���܂��B</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+      <hr size="2" />
+      <h4><a name="others_size">サイズの範囲</a></h4>
+      <div class="indent">
+        <p>検索するファイルのサイズを指定します。</p>
+        <p>サイズはキロバイト（KB）単位で指定します。</p>
+        <p>左側のプルダウンで範囲を選択し、右側にサイズを数値で入力します。</p>
+        <p>サイズを指定した場合、フォルダはヒットしません。</p>
+        <div class="indent">
+          <img alt="サイズの範囲" src="size.png" />
+          <div class="indent">
+            <h5>すべて</h5>
+            <div class="indent">
+              <p>サイズを限定しません。</p>
+            </div>
+            <h5>最低</h5>
+            <div class="indent">
+              <p>最低サイズを指定します。</p>
+              <p>指定したサイズ以上のファイルがヒットします。</p>
+            </div>
+            <h5>最高</h5>
+            <div class="indent">
+              <p>最高サイズを指定します。</p>
+              <p>指定したサイズ以下のファイルがヒットします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

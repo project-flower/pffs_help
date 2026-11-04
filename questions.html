@@ -1,29 +1,49 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<head>
-<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
-<link rel="stylesheet" href="style.css" type="text/css">
-<title>Q and A</title>
-</head>
-<body>
-<h4>Q and A</h4>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Q and A</title>
+  </head>
+  <body>
+    <h4>Q and A</h4>
 
-<hr size="2">
-<h4>���k�t�@�C���i.zip�A.cab���j�̒��g�̃t�@�C���̌����͏o���܂����H</h4>
-<div class="indent">
-<p>�o���܂���B�A���A�o�C�i���f�[�^�Ƃ��ăt�@�C�������t�@�C�����Ɋi�[����Ă���ꍇ�A<a href="tab_setting.html#name">�܂܂�镶����</a>�Ɏw�肷��Ƃ��̃t�@�C�����܂ރt�@�C�����q�b�g����ꍇ������܂��B</p>
-</div>
+    <hr size="2" />
+    <h4>圧縮ファイル（.zip、.cab等）の中身のファイルの検索は出来ますか？</h4>
+    <div class="indent">
+      <p>
+        出来ません。但し、バイナリデータとしてファイル名がファイル中に格納されている場合、<a
+          href="tab_setting.html#name"
+          >含まれる文字列</a
+        >に指定するとそのファイルを含むファイルがヒットする場合があります。
+      </p>
+    </div>
 
-<h4>�������ʂ�Windows�W���̌������ʂƈႢ�܂��B</h4>
-<div class="indent">
-<p>PF File search�̌������W�b�N�͓Ǝ��̃��W�b�N���g�p���Ă���ׁAWindows�W���̌����c�[���Ƃ͌������ʂ��قȂ�ꍇ������܂��B</p>
-<p>�A���A���炩�Ɉُ�Ǝv���錋�ʂ�����ꍇ�́A<a href="https://hp.vector.co.jp/authors/VA055535/" target="_blank">Project Flower �E�F�u�T�C�g</a>�̃R���^�N�g�t�H�[���ɂĂȂ�ׂ��ڂ������񍐉������B�o�O�ƍl������ꍇ�́A�C�����������܂��B</p>
-</div>
+    <h4>検索結果がWindows標準の検索結果と違います。</h4>
+    <div class="indent">
+      <p>
+        PF File
+        searchの検索ロジックは独自のロジックを使用している為、Windows標準の検索ツールとは検索結果が異なる場合があります。
+      </p>
+      <p>
+        但し、明らかに異常と思われる結果がある場合は、<a
+          href="https://hp.vector.co.jp/authors/VA055535/"
+          target="_blank"
+          >Project Flower ウェブサイト</a
+        >のコンタクトフォームにてなるべく詳しくご報告下さい。バグと考えられる場合は、修正を検討します。
+      </p>
+    </div>
 
-<h4>�G�N�X�v���[����[�h�L�������g]�ȉ��̃t�H���_�̉��������ꏊ�ŉE�N���b�N���j���[��[PFFS�Ō���]���\������Ȃ��B</h4>
-<div class="indent">
-<p>Windows�̎d�l�ɂ��܂��B</p>
-<p>�V�X�e���h���C�u�iC:���j�� <tt><b>���[�U�[\[���[�U�[��]\�}�C �h�L�������g</b></tt> ����H�����ꍇ�ɂ͕\�����o����l�ł��B</p>
-</div>
-
-</body></html>
+    <h4>
+      エクスプローラで[ドキュメント]以下のフォルダの何も無い場所で右クリックメニューに[PFFSで検索]が表示されない。
+    </h4>
+    <div class="indent">
+      <p>Windowsの仕様によります。</p>
+      <p>
+        システムドライブ（C:等）の
+        <tt><b>ユーザー\[ユーザー名]\マイ ドキュメント</b></tt>
+        から辿った場合には表示が出来る様です。
+      </p>
+    </div>
+  </body>
+</html>

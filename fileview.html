@@ -1,136 +1,225 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<head>
-<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
-<link rel="stylesheet" href="style.css" type="text/css">
-<title>�t�@�C���ꗗ�r���[</title>
-</head>
-<body>
-<h4>�t�@�C���ꗗ�r���[</h4>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>ファイル一覧ビュー</title>
+  </head>
+  <body>
+    <h4>ファイル一覧ビュー</h4>
 
-<hr size="2">
-<table>
-<tr>
-<td valign="top" rowspan="4">
-<img alt="�t�@�C���ꗗ�r���[" src="fileview.png" usemap="#map_fileview">
-<map name="map_fileview">
-<area href="#header" shape="rect" alt="�w�b�_�[" coords="1,1,559,24">
-<area href="#list" shape="rect" alt="�ꗗ" coords="1,24,559,161">
-</map>
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2"><h4 style="margin:0">�E�N���b�N���j���[</h4></td>
-</tr>
-<tr>
-<td align="center"><p style="margin:0"><a href="#list">�ꗗ</a>�̖��O</p></td>
-<td align="center"><p style="margin:0">����ȊO�̏ꏊ</p></td>
-</tr>
-<tr>
-<td align="center" valign="top"><a href="#filemenu"><img alt="�t�@�C�����j���[" src="fileview_contextmenu1.png" style="margin:0"></a></td>
-<td align="center" valign="top"><a href="#viewmenu"><img alt="�r���[���j���[" src="fileview_contextmenu2.png" style="margin:0"></a></td>
-</tr>
-</table>
-<div class="indent">
-<p>�������ꂽ�t�@�C�����\������܂��B</p>
-<p>�ꗗ�̃t�@�C���𑀍삷�鎖���o���܂��B</p>
-</div>
+    <hr size="2" />
+    <table>
+      <tr>
+        <td valign="top" rowspan="4">
+          <img
+            alt="ファイル一覧ビュー"
+            src="fileview.png"
+            usemap="#map_fileview"
+          />
+          <map name="map_fileview">
+            <area
+              href="#header"
+              shape="rect"
+              alt="ヘッダー"
+              coords="1,1,559,24"
+            />
+            <area href="#list" shape="rect" alt="一覧" coords="1,24,559,161" />
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2">
+          <h4 style="margin: 0">右クリックメニュー</h4>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <p style="margin: 0"><a href="#list">一覧</a>の名前</p>
+        </td>
+        <td align="center"><p style="margin: 0">それ以外の場所</p></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top">
+          <a href="#filemenu"
+            ><img
+              alt="ファイルメニュー"
+              src="fileview_contextmenu1.png"
+              style="margin: 0"
+          /></a>
+        </td>
+        <td align="center" valign="top">
+          <a href="#viewmenu"
+            ><img
+              alt="ビューメニュー"
+              src="fileview_contextmenu2.png"
+              style="margin: 0"
+          /></a>
+        </td>
+      </tr>
+    </table>
+    <div class="indent">
+      <p>検索されたファイルが表示されます。</p>
+      <p>一覧のファイルを操作する事が出来ます。</p>
+    </div>
 
-<hr size="2">
-<div class="indent">
+    <hr size="2" />
+    <div class="indent">
+      <h4><a name="header">ヘッダー</a></h4>
+      <img alt="ヘッダー" src="fileview_header.png" />
+      <div class="indent">
+        <p>一覧に表示する項目を表します。</p>
+        <p>
+          項目自体をドラッグする事で、項目の順序を並び替える事が出来ます。クリックするとその項目の要素に従って一覧が並び替えられます。もう一度クリックすると順序が逆になります。
+        </p>
+        <p>
+          境界線をドラッグすると項目の幅を調整出来ます。ダブルクリックすると項目に存在する列が全て表示される幅になります。
+        </p>
+        <p>
+          一覧の名前以外の場所、もしくはヘッダー部を右クリックすると項目を整えるメニューが表示されます。
+        </p>
+        <div class="indent">
+          <h5>名前</h5>
+          <div class="indent">
+            <p>ファイル名／フォルダ名とアイコンを表します。</p>
+            <p>
+              ファイル／フォルダを選択するには<a href="#list">一覧</a
+              >のこの項目をクリックして下さい。
+            </p>
+            <p>アイコンは種類（拡張子）によって異なります。</p>
+            <div class="indent">
+              <img
+                alt="フォルダ"
+                src="icon_folder.png"
+                align="left"
+                style="margin-right: 0.5em"
+              />
+              <h5>フォルダ</h5>
+              <img
+                alt="アプリケーション"
+                src="icon_application.png"
+                align="left"
+                style="margin-right: 0.5em"
+              />
+              <h5>アプリケーション</h5>
+              <div class="indent">
+                <p>
+                  <tt><b>.exe .com</b></tt>
+                </p>
+              </div>
+              <img
+                alt="テキスト"
+                src="icon_text.png"
+                align="left"
+                style="margin-right: 0.5em"
+              />
+              <h5>テキスト</h5>
+              <div class="indent">
+                <p>
+                  <tt><b>.txt .doc</b></tt>
+                </p>
+              </div>
+              <img
+                alt="画像"
+                src="icon_image.png"
+                align="left"
+                style="margin-right: 0.5em"
+              />
+              <h5>画像</h5>
+              <div class="indent">
+                <p>
+                  <tt><b>.bmp .gif .jpeg .jpg .png</b></tt>
+                </p>
+              </div>
+              <img
+                alt="その他"
+                src="icon_blank.png"
+                align="left"
+                style="margin-right: 0.5em"
+              />
+              <h5>その他</h5>
+            </div>
+          </div>
+          <h5>場所</h5>
+          <div class="indent">
+            <p>ファイル／フォルダの存在する絶対パスを表します。</p>
+          </div>
+          <h5>更新日時</h5>
+          <h5>作成日時</h5>
+          <h5>種類</h5>
+          <div class="indent">
+            <p>ファイル／フォルダの拡張子を表します。</p>
+          </div>
+        </div>
+      </div>
 
-<h4><a name="header">�w�b�_�[</a></h4>
-<img alt="�w�b�_�[" src="fileview_header.png">
-<div class="indent">
-<p>�ꗗ�ɕ\�����鍀�ڂ�\���܂��B</p>
-<p>���ڎ��̂��h���b�O���鎖�ŁA���ڂ̏�������ёւ��鎖���o���܂��B�N���b�N����Ƃ��̍��ڂ̗v�f�ɏ]���Ĉꗗ�����ёւ����܂��B������x�N���b�N����Ə������t�ɂȂ�܂��B</p>
-<p>���E�����h���b�O����ƍ��ڂ̕��𒲐��o���܂��B�_�u���N���b�N����ƍ��ڂɑ��݂���񂪑S�ĕ\������镝�ɂȂ�܂��B</p>
-<p>�ꗗ�̖��O�ȊO�̏ꏊ�A�������̓w�b�_�[�����E�N���b�N����ƍ��ڂ𐮂��郁�j���[���\������܂��B</p>
-<div class="indent">
-<h5>���O</h5>
-<div class="indent">
-<p>�t�@�C�����^�t�H���_���ƃA�C�R����\���܂��B</p>
-<p>�t�@�C���^�t�H���_��I������ɂ�<a href="#list">�ꗗ</a>�̂��̍��ڂ��N���b�N���ĉ������B</p>
-<p>�A�C�R���͎�ށi�g���q�j�ɂ���ĈقȂ�܂��B</p>
-<div class="indent">
-<img alt="�t�H���_" src="icon_folder.png" align="left" style="margin-right:0.5em"><h5>�t�H���_</h5>
-<img alt="�A�v���P�[�V����" src="icon_application.png" align="left" style="margin-right:0.5em"><h5>�A�v���P�[�V����</h5>
-<div class="indent">
-<p><tt><b>.exe .com</b></tt></p>
-</div>
-<img alt="�e�L�X�g" src="icon_text.png" align="left" style="margin-right:0.5em"><h5>�e�L�X�g</h5>
-<div class="indent">
-<p><tt><b>.txt .doc</b></tt></p>
-</div>
-<img alt="�摜" src="icon_image.png" align="left" style="margin-right:0.5em"><h5>�摜</h5>
-<div class="indent">
-<p><tt><b>.bmp .gif .jpeg .jpg .png</b></tt></p>
-</div>
-<img alt="���̑�" src="icon_blank.png" align="left" style="margin-right:0.5em"><h5>���̑�</h5>
-</div>
-</div>
-<h5>�ꏊ</h5>
-<div class="indent">
-<p>�t�@�C���^�t�H���_�̑��݂����΃p�X��\���܂��B</p>
-</div>
-<h5>�X�V����</h5>
-<h5>�쐬����</h5>
-<h5>���</h5>
-<div class="indent">
-<p>�t�@�C���^�t�H���_�̊g���q��\���܂��B</p>
-</div>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="list">一覧</a></h4>
+      <img alt="一覧" src="fileview_list.png" />
+      <div class="indent">
+        <p>検索でヒットしたファイル／フォルダの一覧が表示されます。</p>
+        <p>
+          該当するファイル／フォルダの名前をクリックして選択する事が出来ます。
+        </p>
+        <p>
+          [Ctrl]キーを押しながらクリックすると現在の選択を解除せずに選択を追加する事が出来ます。
+        </p>
+        <p>
+          [Shift]キーを押しながらクリックすると現在の選択からクリックした場所まで連続して選択する事が出来ます。
+        </p>
+      </div>
 
-<hr size="2">
-<h4><a name="list">�ꗗ</a></h4>
-<img alt="�ꗗ" src="fileview_list.png">
-<div class="indent">
-<p>�����Ńq�b�g�����t�@�C���^�t�H���_�̈ꗗ���\������܂��B</p>
-<p>�Y������t�@�C���^�t�H���_�̖��O���N���b�N���đI�����鎖���o���܂��B</p>
-<p>[Ctrl]�L�[�������Ȃ���N���b�N����ƌ��݂̑I�������������ɑI����ǉ����鎖���o���܂��B</p>
-<p>[Shift]�L�[�������Ȃ���N���b�N����ƌ��݂̑I������N���b�N�����ꏊ�܂ŘA�����đI�����鎖���o���܂��B</p>
-</div>
+      <hr size="2" />
+      <h4><a name="contextmenu">右クリックメニュー</a></h4>
+      <div class="indent">
+        <h4><a name="filemenu">ファイルメニュー</a></h4>
+        <img alt="ファイルメニュー" src="fileview_contextmenu1.png" />
+        <div class="indent">
+          <h5>開く</h5>
+          <h5>場所を開く</h5>
+          <h5>場所を検索</h5>
+          <h5>送る</h5>
+          <h5>切り取り</h5>
+          <h5>コピー</h5>
+          <h5>削除</h5>
+          <h5>プロパティ</h5>
+          <div class="indent">
+            <p>選択したファイルを操作するメニューです。</p>
+            <p>
+              機能は<a href="menubar.html">メニューバー</a>の<a
+                href="menubar.html#file"
+                >ファイル</a
+              >にある同名のメニューと同じです。
+            </p>
+          </div>
+        </div>
 
-<hr size="2">
-<h4><a name="contextmenu">�E�N���b�N���j���[</a></h4>
-<div class="indent">
-<h4><a name="filemenu">�t�@�C�����j���[</a></h4>
-<img alt="�t�@�C�����j���[" src="fileview_contextmenu1.png">
-<div class="indent">
-<h5>�J��</h5>
-<h5>�ꏊ���J��</h5>
-<h5>�ꏊ������</h5>
-<h5>����</h5>
-<h5>�؂���</h5>
-<h5>�R�s�[</h5>
-<h5>�폜</h5>
-<h5>�v���p�e�B</h5>
-<div class="indent">
-<p>�I�������t�@�C���𑀍삷�郁�j���[�ł��B</p>
-<p>�@�\��<a href="menubar.html">���j���[�o�[</a>��<a href="menubar.html#file">�t�@�C��</a>�ɂ��铯���̃��j���[�Ɠ����ł��B</p>
-</div>
-</div>
-
-<hr size="2">
-<h4><a name="viewmenu">�r���[���j���[</a></h4>
-<img alt="�r���[���j���[" src="fileview_contextmenu2.png">
-<div class="indent">
-<h5>����</h5>
-<div class="indent">
-<p><a href="menubar.html">���j���[�o�[</a>��<a href="menubar.html#view">�\��</a>��<a href="menubar.html#view">����</a>�Ɠ����ł��B</p>
-</div>
-</div>
-<div class="indent">
-<h5>���ڂ𐮂���</h5>
-<div class="indent">
-<p>���݂̃t�@�C���ꗗ�r���[�̕��ɍ��킹�A<a href="#header">�w�b�_�[</a>�̑S�Ă̍��ڂ�\���o����l�Ɋe�w�b�_�[�̕��𒲐����܂��B</p>
-</div>
-</div>
-</div>
-<div class="indent">
-</div>
-
-
-</div>
-</body></html>
+        <hr size="2" />
+        <h4><a name="viewmenu">ビューメニュー</a></h4>
+        <img alt="ビューメニュー" src="fileview_contextmenu2.png" />
+        <div class="indent">
+          <h5>整列</h5>
+          <div class="indent">
+            <p>
+              <a href="menubar.html">メニューバー</a>の<a
+                href="menubar.html#view"
+                >表示</a
+              >→<a href="menubar.html#view">整列</a>と同じです。
+            </p>
+          </div>
+        </div>
+        <div class="indent">
+          <h5>項目を整える</h5>
+          <div class="indent">
+            <p>
+              現在のファイル一覧ビューの幅に合わせ、<a href="#header"
+                >ヘッダー</a
+              >の全ての項目を表示出来る様に各ヘッダーの幅を調整します。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="indent"></div>
+    </div>
+  </body>
+</html>

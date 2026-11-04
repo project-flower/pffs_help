@@ -1,212 +1,376 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<head>
-<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
-<link rel="stylesheet" href="style.css" type="text/css">
-<title>���j���[�o�[</title>
-</head>
-<body>
-<h4>���j���[�o�[</h4>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>メニューバー</title>
+  </head>
+  <body>
+    <h4>メニューバー</h4>
 
-<hr size="2">
-<img alt="PF File search" src="menu_001.png" usemap="#map_menu">
-<map name="map_menu">
-<area href="#file" shape="rect" alt="�t�@�C��" coords="0,0,85,22">
-<area href="#edit" shape="rect" alt="�ҏW" coords="85,0,146,22">
-<area href="#view" shape="rect" alt="�\��" coords="146,0,208,22">
-<area href="#option" shape="rect" alt="�I�v�V����" coords="208,0,307,22">
-<area href="#help" shape="rect" alt="�w���v" coords="307,0,382,22">
-</map>
+    <hr size="2" />
+    <img alt="PF File search" src="menu_001.png" usemap="#map_menu" />
+    <map name="map_menu">
+      <area href="#file" shape="rect" alt="ファイル" coords="0,0,85,22" />
+      <area href="#edit" shape="rect" alt="編集" coords="85,0,146,22" />
+      <area href="#view" shape="rect" alt="表示" coords="146,0,208,22" />
+      <area
+        href="#option"
+        shape="rect"
+        alt="オプション"
+        coords="208,0,307,22"
+      />
+      <area href="#help" shape="rect" alt="ヘルプ" coords="307,0,382,22" />
+    </map>
 
-<hr size="2">
-<div class="indent">
+    <hr size="2" />
+    <div class="indent">
+      <h4><a name="file">ファイル</a></h4>
+      <img alt="ファイル" src="menu_file.png" usemap="#map_file" />
+      <map name="map_file">
+        <area href="#file_open" shape="rect" alt="開く" coords="2,23,219,45" />
+        <area href="#file_send" shape="rect" alt="送る" coords="2,51,219,73" />
+        <area
+          href="#file_delete"
+          shape="rect"
+          alt="削除"
+          coords="2,79,219,101"
+        />
+        <area
+          href="#file_property"
+          shape="rect"
+          alt="プロパティ"
+          coords="2,101,219,123"
+        />
+        <area
+          href="#file_openlocation"
+          shape="rect"
+          alt="場所を開く"
+          coords="2,129,219,151"
+        />
+        <area
+          href="#file_searchlocation"
+          shape="rect"
+          alt="場所を検索"
+          coords="2,151,217,173"
+        />
+        <area
+          href="savesettings.html"
+          shape="rect"
+          alt="検索条件を保存"
+          coords="2,179,219,201"
+        />
+        <area
+          href="setcontextmenu.html"
+          shape="rect"
+          alt="右クリックメニューに追加"
+          coords="2,207,219,229"
+        />
+        <area
+          href="#file_close"
+          shape="rect"
+          alt="閉じる"
+          coords="2,235,219,257"
+        />
+      </map>
+      <div class="indent">
+        <h5><a name="file_open">開く</a></h5>
+        <div class="indent">
+          <p>
+            選択されたファイル／フォルダをWindowsの規定のアプリケーションで開きます。
+          </p>
+        </div>
+        <h5><a name="file_send">送る</a></h5>
+        <div class="indent">
+          <p>
+            選択されたファイル／フォルダをWindowsの送るメニューに登録されたリンクへ送ります。
+          </p>
+          <p>
+            但し、表示される一覧はエクスプローラの[送る]で表示される一覧と異なる場合があります。
+          </p>
+          <p>又、送る動作はエクスプローラの[送る]とは異なる場合があります。</p>
+        </div>
+        <h5><a name="file_delete">削除</a></h5>
+        <div class="indent">
+          <p>選択されたファイル／フォルダを削除します。</p>
+        </div>
+        <h5><a name="file_property">プロパティ</a></h5>
+        <div class="indent">
+          <p>選択されたファイル／フォルダのプロパティを表示します。</p>
+          <p>
+            Windows
+            XPの場合、複数選択されている場合は、一番上のファイル／フォルダが対象になります。
+          </p>
+        </div>
+        <h5><a name="file_openlocation">場所を開く</a></h5>
+        <div class="indent">
+          <p>選択されたファイル／フォルダの場所をエクスプローラで開きます。</p>
+        </div>
+        <h5><a name="file_searchlocation">場所を検索</a></h5>
+        <div class="indent">
+          <p>
+            選択されたファイル／フォルダの場所を検索条件の場所に設定します。
+          </p>
+        </div>
+        <h5>検索条件を保存</h5>
+        <div class="indent">
+          <p><a href="savesettings.html">→</a></p>
+        </div>
+        <h5>右クリックメニューに追加</h5>
+        <div class="indent">
+          <p><a href="setcontextmenu.html">→</a></p>
+        </div>
+        <h5><a name="file_close">閉じる</a></h5>
+        <div class="indent">
+          <p>PF File searchを終了します。</p>
+          <p>ウィンドウ右上の×をクリックするのと同じです。</p>
+        </div>
+      </div>
 
-<h4><a name="file">�t�@�C��</a></h4>
-<img alt="�t�@�C��" src="menu_file.png" usemap="#map_file">
-<map name="map_file">
-<area href="#file_open" shape="rect" alt="�J��" coords="2,23,219,45">
-<area href="#file_send" shape="rect" alt="����" coords="2,51,219,73">
-<area href="#file_delete" shape="rect" alt="�폜" coords="2,79,219,101">
-<area href="#file_property" shape="rect" alt="�v���p�e�B" coords="2,101,219,123">
-<area href="#file_openlocation" shape="rect" alt="�ꏊ���J��" coords="2,129,219,151">
-<area href="#file_searchlocation" shape="rect" alt="�ꏊ������" coords="2,151,217,173">
-<area href="savesettings.html" shape="rect" alt="����������ۑ�" coords="2,179,219,201">
-<area href="setcontextmenu.html" shape="rect" alt="�E�N���b�N���j���[�ɒǉ�" coords="2,207,219,229">
-<area href="#file_close" shape="rect" alt="����" coords="2,235,219,257">
-</map>
-<div class="indent">
-<h5><a name="file_open">�J��</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_��Windows�̋K��̃A�v���P�[�V�����ŊJ���܂��B</p>
-</div>
-<h5><a name="file_send">����</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_��Windows�̑��郁�j���[�ɓo�^���ꂽ�����N�֑���܂��B</p>
-<p>�A���A�\�������ꗗ�̓G�N�X�v���[����[����]�ŕ\�������ꗗ�ƈقȂ�ꍇ������܂��B</p>
-<p>���A���铮��̓G�N�X�v���[����[����]�Ƃ͈قȂ�ꍇ������܂��B</p>
-</div>
-<h5><a name="file_delete">�폜</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_���폜���܂��B</p>
-</div>
-<h5><a name="file_property">�v���p�e�B</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_�̃v���p�e�B��\�����܂��B</p>
-<p>Windows XP�̏ꍇ�A�����I������Ă���ꍇ�́A��ԏ�̃t�@�C���^�t�H���_���ΏۂɂȂ�܂��B</p>
-</div>
-<h5><a name="file_openlocation">�ꏊ���J��</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_�̏ꏊ���G�N�X�v���[���ŊJ���܂��B</p>
-</div>
-<h5><a name="file_searchlocation">�ꏊ������</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_�̏ꏊ�����������̏ꏊ�ɐݒ肵�܂��B</p>
-</div>
-<h5>����������ۑ�</h5>
-<div class="indent">
-<p><a href="savesettings.html">��</a></p>
-</div>
-<h5>�E�N���b�N���j���[�ɒǉ�</h5>
-<div class="indent">
-<p><a href="setcontextmenu.html">��</a></p>
-</div>
-<h5><a name="file_close">����</a></h5>
-<div class="indent">
-<p>PF File search���I�����܂��B</p>
-<p>�E�B���h�E�E��́~���N���b�N����̂Ɠ����ł��B</p>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="edit">編集</a></h4>
+      <img alt="編集" src="menu_edit.png" usemap="#map_edit" />
+      <map name="map_edit">
+        <area
+          href="#edit_cut"
+          shape="rect"
+          alt="切り取り"
+          coords="2,23,200,45"
+        />
+        <area
+          href="#edit_copy"
+          shape="rect"
+          alt="コピー"
+          coords="2,45,200,67"
+        />
+        <area
+          href="#edit_selectall"
+          shape="rect"
+          alt="すべて選択"
+          coords="2,73,200,95"
+        />
+        <area
+          href="#edit_changeselection"
+          shape="rect"
+          alt="選択の切り替え"
+          coords="2,95,200,117"
+        />
+      </map>
+      <div class="indent">
+        <h5><a name="edit_cut">切り取り</a></h5>
+        <div class="indent">
+          <p>選択されたファイル／フォルダをクリップボードにカットします。</p>
+          <p>
+            切り取りを実行すると選択されたファイル／フォルダは一覧から削除されますが、ファイル／フォルダ自体は削除されません。
+          </p>
+        </div>
+        <h5><a name="edit_copy">コピー</a></h5>
+        <div class="indent">
+          <p>選択されたファイル／フォルダをクリップボードにコピーします。</p>
+        </div>
+        <h5><a name="edit_selectall">すべて選択</a></h5>
+        <div class="indent">
+          <p>一覧のファイル／フォルダを全て選択します。</p>
+        </div>
+        <h5><a name="edit_changeselection">選択の切り替え</a></h5>
+        <div class="indent">
+          <p>一覧のファイル／フォルダの選択／非選択を逆にします。</p>
+        </div>
+      </div>
 
-<hr size="2">
-<h4><a name="edit">�ҏW</a></h4>
-<img alt="�ҏW" src="menu_edit.png" usemap="#map_edit">
-<map name="map_edit">
-<area href="#edit_cut" shape="rect" alt="�؂���" coords="2,23,200,45">
-<area href="#edit_copy" shape="rect" alt="�R�s�[" coords="2,45,200,67">
-<area href="#edit_selectall" shape="rect" alt="���ׂđI��" coords="2,73,200,95">
-<area href="#edit_changeselection" shape="rect" alt="�I���̐؂�ւ�" coords="2,95,200,117">
-</map>
-<div class="indent">
-<h5><a name="edit_cut">�؂���</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_���N���b�v�{�[�h�ɃJ�b�g���܂��B</p>
-<p>�؂�������s����ƑI�����ꂽ�t�@�C���^�t�H���_�͈ꗗ����폜����܂����A�t�@�C���^�t�H���_���͍̂폜����܂���B</p>
-</div>
-<h5><a name="edit_copy">�R�s�[</a></h5>
-<div class="indent">
-<p>�I�����ꂽ�t�@�C���^�t�H���_���N���b�v�{�[�h�ɃR�s�[���܂��B</p>
-</div>
-<h5><a name="edit_selectall">���ׂđI��</a></h5>
-<div class="indent">
-<p>�ꗗ�̃t�@�C���^�t�H���_��S�đI�����܂��B</p>
-</div>
-<h5><a name="edit_changeselection">�I���̐؂�ւ�</a></h5>
-<div class="indent">
-<p>�ꗗ�̃t�@�C���^�t�H���_�̑I���^��I�����t�ɂ��܂��B</p>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="view">表示</a></h4>
+      <img alt="表示" src="menu_view.png" usemap="#map_view" />
+      <map name="map_view">
+        <area href="#view_sort" shape="rect" alt="整列" coords="2,23,114,45" />
+        <area
+          href="#view_sort"
+          shape="rect"
+          alt="名前順"
+          coords="117,25,267,47"
+        />
+        <area
+          href="#view_sort"
+          shape="rect"
+          alt="フォルダ順"
+          coords="117,47,267,69"
+        />
+        <area
+          href="#view_sort"
+          shape="rect"
+          alt="種類順"
+          coords="117,69,267,91"
+        />
+        <area
+          href="#view_sort"
+          shape="rect"
+          alt="サイズ順"
+          coords="117,91,267,113"
+        />
+        <area
+          href="#view_sort"
+          shape="rect"
+          alt="日付順"
+          coords="117,113,267,135"
+        />
+      </map>
+      <div class="indent">
+        <h5><a name="view_sort">整列</a></h5>
+        <div class="indent">
+          <p>ファイル／フォルダの一覧を指定した条件で並び替えます。</p>
+          <div class="indent">
+            <h5>名前順</h5>
+            <h5>フォルダ順</h5>
+            <h5>種類順</h5>
+            <h5>サイズ順</h5>
+            <h5>日付順</h5>
+            <div class="indent">
+              <p>※更新日時順になります。</p>
+            </div>
+          </div>
+          <p>もう一度同じ条件を選択すると降順と昇順が切り替わります。</p>
+        </div>
+      </div>
 
-<hr size="2">
-<h4><a name="view">�\��</a></h4>
-<img alt="�\��" src="menu_view.png" usemap="#map_view">
-<map name="map_view">
-<area href="#view_sort" shape="rect" alt="����" coords="2,23,114,45">
-<area href="#view_sort" shape="rect" alt="���O��" coords="117,25,267,47">
-<area href="#view_sort" shape="rect" alt="�t�H���_��" coords="117,47,267,69">
-<area href="#view_sort" shape="rect" alt="��ޏ�" coords="117,69,267,91">
-<area href="#view_sort" shape="rect" alt="�T�C�Y��" coords="117,91,267,113">
-<area href="#view_sort" shape="rect" alt="���t��" coords="117,113,267,135">
-</map>
-<div class="indent">
-<h5><a name="view_sort">����</a></h5>
-<div class="indent">
-<p>�t�@�C���^�t�H���_�̈ꗗ���w�肵�������ŕ��ёւ��܂��B</p>
-<div class="indent">
-<h5>���O��</h5>
-<h5>�t�H���_��</h5>
-<h5>��ޏ�</h5>
-<h5>�T�C�Y��</h5>
-<h5>���t��</h5>
-<div class="indent">
-<p>���X�V�������ɂȂ�܂��B</p>
-</div>
-</div>
-<p>������x����������I������ƍ~���Ə������؂�ւ��܂��B</p>
-</div>
-</div>
+      <hr size="2" />
+      <h4><a name="option">オプション</a></h4>
+      <img alt="オプション" src="menu_option.png" usemap="#map_option" />
+      <map name="map_option">
+        <area
+          href="#option_sensitive"
+          shape="rect"
+          alt="大文字と小文字の区別"
+          coords="2,23,238,45"
+        />
+        <area
+          href="#option_includespace"
+          shape="rect"
+          alt="空白を含める"
+          coords="2,45,238,67"
+        />
+        <area
+          href="#option_useregex"
+          shape="rect"
+          alt="正規表現を使用"
+          coords="0,0,0,0"
+        />
+        <area
+          href="#option_hpmode"
+          shape="rect"
+          alt="ハイパフォーマンスモード"
+          coords="0,0,0,0"
+        />
+        <area
+          href="#option_parallel"
+          shape="rect"
+          alt="並列処理"
+          coords="0,0,0,0"
+        />
+      </map>
+      <div class="indent">
+        <p>検索の方式を変更します。クリックするとチェックが入ります。</p>
+        <p>チェックが入っているものが有効になります。</p>
 
-<hr size="2">
-<h4><a name="option">�I�v�V����</a></h4>
-<img alt="�I�v�V����" src="menu_option.png" usemap="#map_option">
-<map name="map_option">
-<area href="#option_sensitive" shape="rect" alt="�啶���Ə������̋��" coords="2,23,238,45">
-<area href="#option_includespace" shape="rect" alt="�󔒂��܂߂�" coords="2,45,238,67">
-<area href="#option_useregex" shape="rect" alt="���K�\�����g�p" coords="0,0,0,0">
-<area href="#option_hpmode" shape="rect" alt="�n�C�p�t�H�[�}���X���[�h" coords="0,0,0,0">
-<area href="#option_parallel" shape="rect" alt="���񏈗�" coords="0,0,0,0">
-</map>
-<div class="indent">
-<p>�����̕�����ύX���܂��B�N���b�N����ƃ`�F�b�N������܂��B</p>
-<p>�`�F�b�N�������Ă�����̂��L���ɂȂ�܂��B</p>
+        <h5><a name="option_sensitive">大文字と小文字の区別</a></h5>
+        <div class="indent">
+          <p>検索条件の名前の大文字と小文字を区別します。</p>
+        </div>
 
-<h5><a name="option_sensitive">�啶���Ə������̋��</a></h5>
-<div class="indent">
-<p>���������̖��O�̑啶���Ə���������ʂ��܂��B</p>
-</div>
+        <h5><a name="option_includespace">空白を含める</a></h5>
+        <div class="indent">
+          <p>検索条件の名前の空白を文字として検索します。</p>
+          <p>
+            このオプションを有効にするとファイル名として使用可能な全ての文字を検索出来ます。
+          </p>
+          <div class="indent">
+            <p>
+              <a href="tab_setting.html#name">AND条件</a>を指定する場合は
+              <b>:</b> （コロン）
+            </p>
+            <p>
+              <a href="tab_setting.html#name">OR条件</a>を指定する場合は
+              <b>/</b> （スラッシュ）
+            </p>
+            <p>を入力して下さい。</p>
+          </div>
+        </div>
 
-<h5><a name="option_includespace">�󔒂��܂߂�</a></h5>
-<div class="indent">
-<p>���������̖��O�̋󔒂𕶎��Ƃ��Č������܂��B</p>
-<p>���̃I�v�V������L���ɂ���ƃt�@�C�����Ƃ��Ďg�p�\�ȑS�Ă̕����������o���܂��B</p>
-<div class="indent">
-<p><a href="tab_setting.html#name">AND����</a>���w�肷��ꍇ�� <b>:</b> �i�R�����j</p>
-<p><a href="tab_setting.html#name">OR����</a>���w�肷��ꍇ�� <b>/</b> �i�X���b�V���j</p>
-<p>����͂��ĉ������B</p>
-</div>
-</div>
+        <h5><a name="option_useregex">正規表現を使用</a></h5>
+        <div class="indent">
+          <p>
+            検索条件の名前に正規表現を使用します。クエリが正しくないと検索を実行出来ません。
+          </p>
+          <p>
+            使用出来る正規表現は.NET
+            Frameworkの仕様（下記リンク）を参照して下さい。
+          </p>
+          <p>
+            <a
+              href="https://docs.microsoft.com/ja-jp/previous-versions/dotnet/netframework-4.0/az24scfc(v=vs.100)"
+              target="_blank"
+              >正規表現言語要素 / .NET Frameworkの正規表現</a
+            >
+          </p>
+        </div>
 
-<h5><a name="option_useregex">���K�\�����g�p</a></h5>
-<div class="indent">
-<p>���������̖��O�ɐ��K�\�����g�p���܂��B�N�G�����������Ȃ��ƌ��������s�o���܂���B</p>
-<p>�g�p�o���鐳�K�\����.NET Framework�̎d�l�i���L�����N�j���Q�Ƃ��ĉ������B</p>
-<p><a href="https://docs.microsoft.com/ja-jp/previous-versions/dotnet/netframework-4.0/az24scfc(v=vs.100)" target="_blank">���K�\������v�f / .NET Framework�̐��K�\��</a></p>
-</div>
+        <h5><a name="option_parallel">並列処理</a></h5>
+        <div class="indent">
+          <p>マイ コンピュータを検索時にドライブ毎に並列で検索をします。</p>
+          <p>
+            マルチコア向け機能です。検索結果はドライブ順にはならず、ヒットした順になる為、必要に応じ<a
+              href="#view"
+              >整列</a
+            >して下さい。
+          </p>
+          <h5>※注意</h5>
+          <div class="indent">
+            <p>
+              並列処理は、Windowsで認識されているドライブレター（C:
+              D:等）毎に実行されます。
+            </p>
+            <p>
+              パーティションにより分割された同一ドライブがある場合（例えば、C:とD:が同じ物理ドライブ）、1つの物理ドライブに対し並列に処理を行う為、逆にパフォーマンスが低下するばかりでなく、ドライブに負荷を掛ける恐れがあります。
+            </p>
+            <p>この様な環境の場合、並列処理は無効にして下さい。</p>
+          </div>
+        </div>
 
-<h5><a name="option_parallel">���񏈗�</a></h5>
-<div class="indent">
-<p>�}�C �R���s���[�^���������Ƀh���C�u���ɕ���Ō��������܂��B</p>
-<p>�}���`�R�A�����@�\�ł��B�������ʂ̓h���C�u���ɂ͂Ȃ炸�A�q�b�g�������ɂȂ�ׁA�K�v�ɉ���<a href="#view">����</a>���ĉ������B</p>
-<h5>������</h5>
-<div class="indent">
-<p>���񏈗��́AWindows�ŔF������Ă���h���C�u���^�[�iC: D:���j���Ɏ��s����܂��B</p>
-<p>�p�[�e�B�V�����ɂ�蕪�����ꂽ����h���C�u������ꍇ�i�Ⴆ�΁AC:��D:�����������h���C�u�j�A1�̕����h���C�u�ɑ΂�����ɏ������s���ׁA�t�Ƀp�t�H�[�}���X���ቺ����΂���łȂ��A�h���C�u�ɕ��ׂ��|���鋰�ꂪ����܂��B</p>
-<p>���̗l�Ȋ��̏ꍇ�A���񏈗��͖����ɂ��ĉ������B</p>
-</div>
-</div>
+        <h5><a name="option_hpmode">ハイパフォーマンスモード</a></h5>
+        <div class="indent">
+          <p>検索結果を逐一表示させず、検索終了時にまとめて表示します。</p>
+          <p>
+            ファイル一覧ビューの表示の負荷が掛からない為、ヒット数が多い場合に検索速度が向上します。
+          </p>
+        </div>
+      </div>
 
-<h5><a name="option_hpmode">�n�C�p�t�H�[�}���X���[�h</a></h5>
-<div class="indent">
-<p>�������ʂ𒀈�\���������A�����I�����ɂ܂Ƃ߂ĕ\�����܂��B</p>
-<p>�t�@�C���ꗗ�r���[�̕\���̕��ׂ��|����Ȃ��ׁA�q�b�g���������ꍇ�Ɍ������x�����サ�܂��B</p>
-</div>
-</div>
-
-<hr size="2">
-<h4><a name="help">�w���v</a></h4>
-<img alt="�w���v" src="menu_help.png" usemap="#map_help">
-<map name="map_help">
-<area href="#help_help" shape="rect" alt="�w���v" coords="2,23,189,45">
-<area href="#help_version" shape="rect" alt="�o�[�W�������" coords="2,45,189,67">
-</map>
-<div class="indent">
-<h5><a name="help_help">�w���v</a></h5>
-<div class="indent">
-<p>PF File search�̃w���v��\�����܂��B</p>
-</div>
-<h5><a name="help_version">�o�[�W�������</a></h5>
-<div class="indent">
-<p>PF File search�̃o�[�W��������\�����܂��B</p>
-</div>
-</div>
-</div>
-</body></html>
+      <hr size="2" />
+      <h4><a name="help">ヘルプ</a></h4>
+      <img alt="ヘルプ" src="menu_help.png" usemap="#map_help" />
+      <map name="map_help">
+        <area
+          href="#help_help"
+          shape="rect"
+          alt="ヘルプ"
+          coords="2,23,189,45"
+        />
+        <area
+          href="#help_version"
+          shape="rect"
+          alt="バージョン情報"
+          coords="2,45,189,67"
+        />
+      </map>
+      <div class="indent">
+        <h5><a name="help_help">ヘルプ</a></h5>
+        <div class="indent">
+          <p>PF File searchのヘルプを表示します。</p>
+        </div>
+        <h5><a name="help_version">バージョン情報</a></h5>
+        <div class="indent">
+          <p>PF File searchのバージョン情報を表示します。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
