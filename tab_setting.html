@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>検索条件タブ</title>
+</head>
+<body>
+<h4>検索条件タブ</h4>
+
+<hr size="2">
+<h4><a name="name">名前と場所</a></h4>
+<img alt="名前と場所" src="tab_name.png" usemap="#map_name">
+<map name="map_name">
+<area href="#date" shape="rect" alt="日付" coords="72,2,112,20">
+<area href="#others" shape="rect" alt="その他" coords="112,2,153,20">
+<area href="#name_name" shape="rect" alt="名前" coords="116,28,459,48">
+<area href="#name_text" shape="rect" alt="含まれる文字列" coords="116,54,332,73">
+<area href="#name_encoding" shape="rect" alt="エンコード" coords="338,54,459,74">
+<area href="#name_location" shape="rect" alt="探す場所" coords="116,80,459,100">
+<area href="#name_subfolders" shape="rect" alt="サブフォルダも探す" coords="116,111,233,124">
+<area href="#name_refer" shape="rect" alt="参照" coords="375,107,458,128">
+</map>
+
+<hr size="2">
+<div class="indent">
+
+<h4><a name="name_name">名前</a></h4>
+<div class="indent">
+<p>検索するファイル／フォルダの名前を入力します。</p>
+<p><b>完全に一致した名前を検索する場合は、名前を<tt><font color="#FF0000">"</font></tt>（ダブルクオーツ）で囲んで下さい。</b></p>
+<p>又、空白が含まれる名前を検索する場合も同様に、名前を<tt>"</tt>（ダブルクオーツ）で囲むか、[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にして下さい。</p>
+<div class="indent">
+<h5>例</h5>
+<p><tt><b><font color="#FF0000">"</font>Documents and Settings<font color="#FF0000">"</font></b></tt></p>
+<p>上記は、Documents and Settingsと言う名前がヒットします。</p>
+</div>
+<p>但し、<tt><b>"</b></tt> で囲まれた文字列は完全に一致した名前しかヒットしないので、</p>
+<p>例えば<b>The Documents and Settings and Others</b>と言う名前もヒットさせるには、ワイルドカードを追加して</p>
+<p><tt><b><font color="#FF0000">"*</font>Documents and Settings<font color="#FF0000">*"</font></b></tt></p>
+<p>と指定するか、[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にし、</p>
+<p><tt><b>Documents and Settings</b></tt></p>
+<p>と指定して下さい。</p>
+<p><a href="menubar.html">メニューバー</a>の<a href="menubar.html#option">オプション</a>メニューで大文字と小文字を区別、正規表現を使用の設定が出来ます。</p>
+<p>以下のワイルドカードが使用出来ます（正規表現を使用しない場合）。</p>
+<div class="indent">
+<p><h5><tt>*</tt></h5>
+<div class="indent">
+<p>任意の0文字以上の文字</p>
+</div>
+<h5><tt>?</tt></h5>
+<div class="indent">
+<p>任意の1文字</p>
+</div>
+</div>
+<p>AND検索、OR検索が出来ます。ANDとORを組み合わせる場合、ANDが優先されます。（全てのAND条件に含まれる物がヒットします。）</p>
+<div class="indent">
+<h5>AND検索</h5>
+<div class="indent">
+<p><tt>名前1<font color="#FF0000"><b> AND </b></font>名前2</tt><br>
+<tt>名前1<font color="#FF0000"><b>;AND </b></font>名前2</tt><br>
+<tt>名前1<font color="#FF0000"><b>&amp;</b></font>名前2</tt><br>
+<tt>名前1<font color="#FF0000"><b>+</b></font>名前2</tt></p>
+<h5>[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にした場合</h5>
+<div class="indent">
+<p><tt>名前1<font color="#FF0000"><b>:</b></font>名前2</tt></p>
+</div>
+<p>上記は、名前1と名前2を含むファイルがヒットします。</p>
+</div>
+<h5>OR検索</h5>
+<div class="indent">
+<p><tt>名前1<font color="#FF0000"><b> OR </b></font>名前2</tt><br>
+<tt>名前1<font color="#FF0000"><b>;OR </b></font>名前2</tt><br>
+<tt>名前1<font color="#FF0000"><b>;</b></font>名前2</tt><br>
+<tt>名前1<b> </b>名前2</tt></p>
+<h5>[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にした場合</h5>
+<div class="indent">
+<p><tt>名前1<font color="#FF0000"><b>/</b></font>名前2</tt></p>
+</div>
+<p>上記は、名前1か名前2を含むファイルがヒットします。</p>
+</div>
+<h5>OR検索(完全一致)</h5>
+<div class="indent">
+<p><tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b> OR </b></font><b>"</b>名前2<b>"</b></tt><br>
+<tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;OR </b></font><b>"</b>名前2<b>"</b></tt><br>
+<tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;</b></font><b>"</b>名前2<b>"</b></tt><br>
+<tt><b>"</b>名前1<b>"</b><b> </b><b>"</b>名前2<b>"</b></tt></p>
+<h5>[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にした場合</h5>
+<div class="indent">
+<p><tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>/</b></font><b>"</b>名前2<b>"</b></tt></p>
+</div>
+<p>上記は、名前1と完全に一致するか名前2と完全に一致するファイルがヒットします。</p>
+</div>
+<h5>OR検索(完全一致＋部分一致)</h5>
+<div class="indent">
+<p><tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b> OR </b></font>名前2</tt><br>
+<tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;OR </b></font>名前2</tt><br>
+<tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>;</b></font>名前2</tt><br>
+<tt><b>"</b>名前1<b>"</b><b> </b>名前2</tt></p>
+<h5>[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にした場合</h5>
+<div class="indent">
+<p><tt><b>"</b>名前1<b>"</b><font color="#FF0000"><b>/</b></font>名前2</tt></p>
+</div>
+<p>上記は、名前1と完全に一致するか名前2と一致するファイルがヒットします。</p>
+</div>
+<p>AND／ORの文字は半角で、大文字でも小文字でも構いません。</p>
+</div>
+<p>右側のドロップダウンボタン（▼）をクリックすると、履歴が表示されます。</p>
+<div class="indent">
+<p>履歴はpffs.exeのある場所の<tt><b>pffs.log</b></tt>と言うファイルに保存されます。</p>
+<p>このファイルを削除するか、テキストエディタ等で開いて文字列を全て削除すると履歴を消去する事が出来ます。</p>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="name_text">含まれる文字列</a></h4>
+<div class="indent">
+<p>ファイルにバイナリレベルで含まれる文字列を指定します。</p>
+<p>文字のエンコードによってバイナリデータ値が変わる為、同じ文字でもエンコードが異なる場合、ヒットしません。</p>
+<p>又、<a href="menubar.html#option">大文字と小文字の区別</a>、<a href="menubar.html#option">正規表現の使用</a>はこの項目には関係ありません。</p>
+<div class="indent">
+
+<h4><a name="name_encoding">エンコード</a></h4>
+<img alt="エンコード" src="encoding.png">
+<div class="indent">
+<p>含まれる文字列のエンコードを指定します。<b><a href="#name">名前</a></b>には関係ありません。</p>
+<div class="indent">
+<h5>ANSI</h5>
+<h5>ASCII</h5>
+<h5>Big Endian</h5>
+<h5>Unicode</h5>
+<h5>UTF32</h5>
+<h5>UTF7</h5>
+<h5>UTF8</h5>
+</div>
+</div>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="name_location">探す場所</a></h4>
+<div class="indent">
+<p>検索するパスを指定します。</p>
+<p>任意に入力する他、右端のドロップダウンボタン（▼）で登録された一覧の中から選択する事が出来ます。</p>
+<div class="indent">
+<p>一番上にはマイ コンピュータが登録されています。</p>
+<div class="indent">
+<p>マイ コンピュータを選択すると全てのドライブを検索対象とします。この場合、ドライブ単位で<a href="menubar.html#option">並列処理</a>を行う事が出来ます。</p>
+</div>
+<p>その次にマイ ドキュメント、マイ ピクチャ、マイ ビデオ、マイ ミュージックのフォルダ、各ドライブの順に登録されますが、Windowsのバージョン／環境により異なる場合があります。</p>
+</div>
+<p><a href="#name">参照ボタン</a>で場所を指定する事も出来ます。</p>
+</div>
+
+<hr size="2">
+<h4><a name="name_subfolders">サブフォルダも探す</a></h4>
+<div class="indent">
+<p><a href="#name">探す場所</a>で指定したパスのサブフォルダも検索します。</p>
+<p>リパース ポイント(ジャンクション)をスキップしたい場合、<a href="howto.html#bootoptions">起動オプション</a>に <b>/skipreparsepoint</b> を追加して起動して下さい。</p>
+<h5>※注:Ver.2.9-2.11</h5>
+<div class="indent">
+<p>リパース ポイント(ジャンクション)はスキップします。</p>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="name_refer">参照ボタン</a></h4>
+<div class="indent">
+<p><a href="#name">探す場所</a>に現在のWindowsの環境に存在するパスをダイアログで指定する事が出来ます。</p>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="date">日付</a></h4>
+<img alt="日付" src="tab_date.png" usemap="#map_date">
+<map name="map_date">
+<area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20">
+<area href="#others" shape="rect" alt="その他" coords="114,2,153,20">
+<area href="#date_limit" shape="rect" alt="一定期間内の次のファイルすべて" coords="10,31,198,44">
+<area href="#date_type" shape="rect" alt="日付の種類" coords="211,28,332,48">
+<area href="#date_section" shape="rect" alt="日付指定" coords="91,54,459,73">
+<area href="#date_months" shape="rect" alt="月間" coords="91,79,285,98">
+<area href="#date_days" shape="rect" alt="月間" coords="91,104,275,123">
+</map>
+
+<hr size="2">
+<div class="indent">
+
+<h4><a name="date_limit">一定期間内の次のファイルすべて</a></h4>
+<div class="indent">
+<p>チェックすると、検索条件に日付を加える事が出来ます。</p>
+<div class="indent">
+
+<h4><a name="date_type">日付の種類</a></h4>
+<img alt="日付の種類" src="datetype.png">
+<div class="indent">
+<h5>変更されたファイル</h5>
+<div class="indent">
+<p>変更された日付が該当するファイル／フォルダがヒットします。</p>
+</div>
+<h5>作成されたファイル</h5>
+<div class="indent">
+<p>作成された日付が該当するファイル／フォルダがヒットします。</p>
+</div>
+<h5>アクセスされたファイル</h5>
+<div class="indent">
+<p>アクセスされた日付が該当するファイル／フォルダがヒットします。</p>
+</div>
+</div>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="date_section">日付指定</a></h4>
+<div class="indent">
+<p>日付単位で特定の区間を指定します。</p>
+<p>左側に最も古い日付、右側に最も新しい日付を指定する事で、指定した<a href="#date_type">日付の種類</a>がその区間に含まれるファイル／フォルダがヒットします。</p>
+<p>左側の日付には既定で3ヶ月前の日付が設定されます。</p>
+<p>左側の日付を変更しなければ、右側の日付より古い日付が全て該当します。</p>
+<p>右側には起動時の日付（<a href="buttons.html">新しい条件</a>を実行した場合、その時の日付）が指定されます。</p>
+<p>右側の日付を変更しなければ、左側の日付から現在までの日付が全て該当します。</p>
+<p>日付は直接入力する事が出来ますが、右側の▼をクリックするとカレンダー形式のGUIで選択出来ます。</p>
+</div>
+
+<hr size="2">
+<h4><a name="date_months">過去月間</a></h4>
+<div class="indent">
+<p>過去から現在までの月数を指定します。</p>
+</div>
+
+<hr size="2">
+<h4><a name="date_days">過去日間</a></h4>
+<div class="indent">
+<p>過去から現在までの日数を指定します。</p>
+</div>
+</div>
+
+<hr size="2">
+<h4><a name="others">その他</a></h4>
+<img alt="日付" src="tab_others.png" usemap="#map_others">
+<map name="map_others">
+<area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20">
+<area href="#date" shape="rect" alt="日付" coords="70,2,110,20">
+<area href="#others_type" shape="rect" alt="ファイルの種類" coords="106,28,459,48">
+<area href="#others_size" shape="rect" alt="サイズの範囲" coords="106,54,232,74">
+<area href="#others_size" shape="rect" alt="サイズの範囲" coords="106,80,232,100"></map>
+
+<hr size="2">
+<div class="indent">
+
+<h4><a name="others_type">ファイルの種類</a></h4>
+<div class="indent">
+<p>検索するファイルの種類（拡張子）を指定します。</p>
+<p>PF File searchでは単純に拡張子で区別しているので、例えば <tt><b>.jpg</b></tt> と <tt><b>.jpeg</b></tt> は区別されます。</p>
+<p><b>ファイル</b>を指定するとファイルのみがヒットします。</p>
+<p><b>フォルダ</b>を指定するとフォルダのみがヒットします。</p>
+<p>その他は、レジストリ情報を元に拡張子と種類名が表示されます。</p>
+<p>特定の拡張子のみを指定したい場合はここで指定して下さい（<a href="#name">名前</a>に <tt>*.txt</tt> 等と指定するよりも検索効率が良くなります。）。</p>
+</div>
+
+<hr size="2">
+<h4><a name="others_size">サイズの範囲</a></h4>
+<div class="indent">
+<p>検索するファイルのサイズを指定します。</p>
+<p>サイズはキロバイト（KB）単位で指定します。</p>
+<p>左側のプルダウンで範囲を選択し、右側にサイズを数値で入力します。</p>
+<p>サイズを指定した場合、フォルダはヒットしません。</p>
+<div class="indent">
+<img alt="サイズの範囲" src="size.png">
+<div class="indent">
+<h5>すべて</h5>
+<div class="indent">
+<p>サイズを限定しません。</p>
+</div>
+<h5>最低</h5>
+<div class="indent">
+<p>最低サイズを指定します。</p>
+<p>指定したサイズ以上のファイルがヒットします。</p>
+</div>
+<h5>最高</h5>
+<div class="indent">
+<p>最高サイズを指定します。</p>
+<p>指定したサイズ以下のファイルがヒットします。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

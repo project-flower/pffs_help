@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>使い方</title>
+</head>
+<body>
+<h4>使い方</h4>
+
+<hr size="2">
+<img alt="PF File search" src="howto_001.png" usemap="#map">
+<map name="map">
+<area href="menubar.html#file" shape="rect" alt="ファイル" coords="14,32,99,54">
+<area href="menubar.html#edit" shape="rect" alt="編集" coords="99,32,160,54">
+<area href="menubar.html#view" shape="rect" alt="表示" coords="160,32,222,54">
+<area href="menubar.html#option" shape="rect" alt="オプション" coords="222,32,321,54">
+<area href="menubar.html#help" shape="rect" alt="ヘルプ" coords="321,32,396,54">
+<area href="tab_setting.html#name" shape="rect" alt="名前と場所" coords="20,57,92,78">
+<area href="tab_setting.html#date" shape="rect" alt="日付" coords="92,59,132,77">
+<area href="tab_setting.html#others" shape="rect" alt="その他" coords="132,59,163,77">
+<area href="tab_setting.html" shape="rect" alt="検索条件" coords="20,77,487,195">
+<area href="buttons.html#start" shape="rect" alt="検索開始" coords="497,81,578,100">
+<area href="buttons.html#quit" shape="rect" alt="終了" coords="497,110,578,129">
+<area href="buttons.html#clear" shape="rect" alt="新しい条件" coords="497,139,578,158">
+<area href="view_file.html" shape="rect" alt="ファイル一覧" coords="20,202,580,364">
+<area href="statusbar.html#statuslabel" shape="rect" alt="ステータスラベル" coords="9,373,475,389">
+<area href="statusbar.html#progressbar" shape="rect" alt="プログレスバー" coords="478,374,576,388">
+</map>
+<div class="indent">
+<p><b>調べたい場所をクリックすると説明を表示します。</b></p>
+</div>
+
+<hr size="2">
+<h4><a name="001">1.</a></h4>
+<img alt="1." src="howto_002.png">
+<div class="indent">
+<p><a href="tab_setting.html">検索条件タブ</a>に検索条件を入力します。</p>
+<p>必要に応じ、<a href="menubar.html#option">オプションメニュー</a>を設定をします。</p>
+</div>
+
+<hr size="2">
+<h4><a name="002">2.</a></h4>
+<img alt="2." src="howto_003.png">
+<div class="indent">
+<p><a href="buttons.html">検索開始ボタン</a>をクリックして検索を開始します。</p>
+</div>
+
+<hr size="2">
+<h4><a name="003">3.</a></h4>
+<img alt="3." src="howto_004.png">
+<div class="indent">
+<p>検索が終了すると、<a href="view_file.html">ファイル一覧ビュー</a>にファイル一覧が表示されます。</p>
+<p>検索結果から、ファイルの操作をする事が出来ます。</p>
+</div>
+
+<hr size="2">
+<h4><a name="cansearchallcharactors">全ての文字を検索可能</a></h4>
+<img alt="全ての文字を検索可能" src="howto_008.png">
+<div class="indent">
+<p>[オプション]の<a href="menubar.html#option">[空白を含める]</a>を有効にすると、Windowsのファイル／フォルダ名に使用可能な全ての文字を検索する事が出来ます。</p>
+</div>
+
+<hr size="2">
+<h4><a name="bootoptions">起動オプション</a></h4>
+<div class="indent">
+<p>起動時にコマンドライン引数を指定すると、任意の設定で起動する事が出来ます。</p>
+<p>ショートカットを作成する例を説明します。</p>
+<div class="indent">
+<img alt="ショートカットの作成" src="howto_005.png">
+<div class="indent">
+<p>pffs.exe を右クリックして、<b>[ショートカットの作成]</b>をクリックします。</p>
+</div>
+<img alt="プロパティ" src="howto_006.png">
+<div class="indent">
+<p>作成されたショートカットを右クリックして、<b>[プロパティ]</b>をクリックします。</p>
+</div>
+<img alt="リンク先" src="howto_007.png">
+<div class="indent">
+<p><b>[リンク先]</b>の最後に、半角スペースと引数（下記）を追加します。</p>
+<div class="indent">
+<table>
+<tbody>
+<tr><td><b>/oncenter</b></td><td>:画面中央で起動する</td></tr>
+<tr><td><b>/subfolders</b></td><td>:サブフォルダも探す</td></tr>
+<tr><td><b>/includespace</b></td><td>:空白を含める</td></tr>
+<tr><td><b>/sensitive</b></td><td>:大文字と小文字を区別する</td></tr>
+<tr><td><b>/useregex</b></td><td>:正規表現を使用</td></tr>
+<tr><td><b>/hpmode</b></td><td>:ハイパフォーマンスモード</td></tr>
+<tr><td><b>/parallel</b></td><td>:並列処理</td></tr>
+<tr><td><b>/skipreparsepoint</b></td><td>:<a href="tab_setting.html#name_subfolders">サブフォルダも探す</a>を有効にした時、リパース ポイント(ジャンクション等)が設定されたサブフォルダは検索しない</td></tr>
+</tbody>
+</table>
+</div>
+<p>引数は複数指定する事が出来ます。順序は関係ありません。</p>
+<p><b>[OK]</b>をクリックし、後は作成したショートカットから起動すれば指定された状態で起動します。</p>
+<p>尚、右クリックメニューにより設定されたコンテキストメニューの[PFFSで検索]の起動オプションは、設定時のPFFSの状態で設定されます。</p>
+</div>
+</div>
+</div>
+</body></html>

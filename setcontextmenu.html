@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=shift_jis" http-equiv="Content-Type">
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>右クリックメニューに追加</title>
+</head>
+<body>
+<h4>右クリックメニューに追加</h4>
+
+<hr size="2">
+<p>PF File searchをエクスプローラの右クリックメニューに追加します。</p>
+<p>既に設定がされている場合、メニューにチェックマークが付いています。</p>
+<div class="indent">
+<p>このメニューを実行するには、Windows Vista以降等では、PF File searchを管理者権限で起動する必要があります。</p>
+<p>pffs.exe又はpffs.exeへのショートカットを右クリックし、<b>[管理者として実行]</b>をクリックして下さい。</p>
+<blockquote><b>このコンピュータへの変更を許可しますか？</b></blockquote>
+<p>と表示されるので、宜しければ<b>[はい]</b>をクリックする事で管理者権限で起動します。</p>
+</div>
+<p>右クリックメニューに追加すると、エクスプローラでドライブ／フォルダ／フォルダの何も無い場所で右クリックをすると<b>[PFFSで検索]</b>と言うメニューが表示され、クリックすると、該当のドライブ／フォルダを<a href="tab_setting.html#name">探す場所</a>として起動します。</p>
+<p><b>[右クリックメニューに追加]</b>はレジストリにデータを書き込みます。</p>
+<p>PF File searchが不要になった場合、レジストリを削除する為に、もう一度上記作業を実行して、PF File searchをもう一度起動し、<b>[右クリックメニューに追加]</b>にチェックが入っていない事を確認して下さい。</p>
+<div class="indent">
+<h5>参考</h5>
+<div class="indent">
+<p>PF File searchがレジストリを書き込む場所</p>
+<div class="indent">
+<h5>HKEY_CLASSES_ROOT\Directory\shell\findWithPFFS</h5>
+<h5>HKEY_CLASSES_ROOT\Directory\Background\shell\findWithPFFS</h5>
+<h5>HKEY_CLASSES_ROOT\Drive\shell\findWithPFFS</h5>
+<h5>HKEY_CLASSES_ROOT\.pffs</h5>
+<h5>HKEY_CLASSES_ROOT\pffs_auto_file</h5>
+</div>
+</div>
+</div>
+</body></html>

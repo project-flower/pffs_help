@@ -1,0 +1,65 @@
+a:link
+{
+	font-weight:bold;
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+}
+
+body
+{
+	margin-top:1em;
+}
+
+div.indent
+{
+	margin:0em 1em;
+}
+
+img
+{
+	border-style:none;
+}
+
+h4
+{
+	font-size:medium;
+	color:#0080FF;
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+h5
+{
+	font-size:medium;
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+hr
+{
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+img
+{
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+p
+{
+	font-size:1em;
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+table
+{
+	margin-top:0em;
+	margin-bottom:1em;
+}
