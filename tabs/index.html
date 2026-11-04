@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
     <title>検索条件タブ</title>
   </head>
   <body>
@@ -10,7 +10,7 @@
 
     <hr size="2" />
     <h4><a name="name">名前と場所</a></h4>
-    <img alt="名前と場所" src="tab_name.png" usemap="#map_name" />
+    <img alt="名前と場所" src="name.png" usemap="#map_name" />
     <map name="map_name">
       <area href="#date" shape="rect" alt="日付" coords="72,2,112,20" />
       <area href="#others" shape="rect" alt="その他" coords="112,2,153,20" />
@@ -61,7 +61,7 @@
         </p>
         <p>
           又、空白が含まれる名前を検索する場合も同様に、名前を<tt>"</tt>（ダブルクオーツ）で囲むか、[オプション]の<a
-            href="menubar.html#option"
+            href="../menubar/index.html#option"
             >[空白を含める]</a
           >を有効にして下さい。
         </p>
@@ -98,7 +98,7 @@
           >
         </p>
         <p>
-          と指定するか、[オプション]の<a href="menubar.html#option"
+          と指定するか、[オプション]の<a href="../menubar/index.html#option"
             >[空白を含める]</a
           >を有効にし、
         </p>
@@ -107,7 +107,8 @@
         </p>
         <p>と指定して下さい。</p>
         <p>
-          <a href="menubar.html">メニューバー</a>の<a href="menubar.html#option"
+          <a href="../menubar/index.html">メニューバー</a>の<a
+            href="../menubar/index.html#option"
             >オプション</a
           >メニューで大文字と小文字を区別、正規表現を使用の設定が出来ます。
         </p>
@@ -146,7 +147,8 @@
               >
             </p>
             <h5>
-              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              [オプション]の<a href="../menubar/index.html#option"
+                >[空白を含める]</a
               >を有効にした場合
             </h5>
             <div class="indent">
@@ -175,7 +177,8 @@
               <tt>名前1<b> </b>名前2</tt>
             </p>
             <h5>
-              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              [オプション]の<a href="../menubar/index.html#option"
+                >[空白を含める]</a
               >を有効にした場合
             </h5>
             <div class="indent">
@@ -206,7 +209,8 @@
               <tt><b>"</b>名前1<b>"</b><b> </b><b>"</b>名前2<b>"</b></tt>
             </p>
             <h5>
-              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              [オプション]の<a href="../menubar/index.html#option"
+                >[空白を含める]</a
               >を有効にした場合
             </h5>
             <div class="indent">
@@ -239,7 +243,8 @@
               <tt><b>"</b>名前1<b>"</b><b> </b>名前2</tt>
             </p>
             <h5>
-              [オプション]の<a href="menubar.html#option">[空白を含める]</a
+              [オプション]の<a href="../menubar/index.html#option"
+                >[空白を含める]</a
               >を有効にした場合
             </h5>
             <div class="indent">
@@ -278,9 +283,8 @@
           文字のエンコードによってバイナリデータ値が変わる為、同じ文字でもエンコードが異なる場合、ヒットしません。
         </p>
         <p>
-          又、<a href="menubar.html#option">大文字と小文字の区別</a>、<a
-            href="menubar.html#option"
-            >正規表現の使用</a
+          又、<a href="../menubar/index.html#option">大文字と小文字の区別</a
+          >、<a href="../menubar/index.html#option">正規表現の使用</a
           >はこの項目には関係ありません。
         </p>
         <div class="indent">
@@ -318,7 +322,7 @@
             <p>
               マイ
               コンピュータを選択すると全てのドライブを検索対象とします。この場合、ドライブ単位で<a
-                href="menubar.html#option"
+                href="../menubar/index.html#option"
                 >並列処理</a
               >を行う事が出来ます。
             </p>
@@ -339,7 +343,7 @@
         </p>
         <p>
           リパース ポイント(ジャンクション)をスキップしたい場合、<a
-            href="howto.html#bootoptions"
+            href="../howto/index.html#bootoptions"
             >起動オプション</a
           >に <b>/skipreparsepoint</b> を追加して起動して下さい。
         </p>
@@ -361,7 +365,7 @@
 
     <hr size="2" />
     <h4><a name="date">日付</a></h4>
-    <img alt="日付" src="tab_date.png" usemap="#map_date" />
+    <img alt="日付" src="date.png" usemap="#map_date" />
     <map name="map_date">
       <area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20" />
       <area href="#others" shape="rect" alt="その他" coords="114,2,153,20" />
@@ -429,7 +433,7 @@
           左側の日付を変更しなければ、右側の日付より古い日付が全て該当します。
         </p>
         <p>
-          右側には起動時の日付（<a href="buttons.html">新しい条件</a
+          右側には起動時の日付（<a href="../buttons/index.html">新しい条件</a
           >を実行した場合、その時の日付）が指定されます。
         </p>
         <p>
@@ -455,7 +459,7 @@
 
     <hr size="2" />
     <h4><a name="others">その他</a></h4>
-    <img alt="日付" src="tab_others.png" usemap="#map_others" />
+    <img alt="日付" src="others.png" usemap="#map_others" />
     <map name="map_others">
       <area href="#name" shape="rect" alt="名前と場所" coords="2,2,68,20" />
       <area href="#date" shape="rect" alt="日付" coords="70,2,110,20" />
